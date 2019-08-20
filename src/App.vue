@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container min-h-screen min-w-full bg-gray-100">
     <h1>{{ greeting }}</h1>
     <div v-if="!loading">
       <router-view></router-view>
