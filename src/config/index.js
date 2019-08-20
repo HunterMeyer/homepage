@@ -1,5 +1,0 @@
-export default {
-  COSMIC_BUCKET: process.env.VUE_COSMIC_BUCKET,
-  COSMIC_READ_KEY: process.env.VUE_COSMIC_READ_KEY,
-  COSMIC_WRITE_KEY: process.env.VUE_COSMIC_WRITE_KEY
-}
