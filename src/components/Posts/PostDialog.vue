@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <div v-model="postDialog">
+    <div>
       <div v-if="this.article">
         <div>
           <button @click.stop="handleCloseDialog()">

@@ -38,7 +38,7 @@ export default {
     const tweet = 'https://twitter.com/home?status=Check%20out%20this%20awesome%20article%3A%20'
     // LinkedIn Share template
     const LinkedIn = 'https://www.linkedin.com/shareArticle?mini=true&url='
-    const LinkedInParams = '&title=' + post.title + '&summary='+ post.metadata.excerpt +'&source=Cosmicify'
+    const LinkedInParams = '&title=' + post.title + '&summary='+ post.metadata.excerpt +'&source=HunterMeyer.com'
     // Pinterest Share template
     const Pin = 'https://pinterest.com/pin/create/button/?url='
     const PinParams = '&media='+ post.metadata.featured_image.imgix_url +'&description='+ post.metadata.excerpt
