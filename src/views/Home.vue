@@ -1,29 +1,26 @@
 <template>
   <div>
-    <div v-for="(post) in getPosts" :key="post._id">
-      <PostListItem :article="post"></PostListItem>
+    <div v-for="(post) in getPosts" :key="post.sys.id">
+      <PostCard :post="post"></PostCard>
     </div>
-    <app-post-dialog v-if="getActivePost" :article="getActivePost"></app-post-dialog>
   </div>
 </template>
 
 <script>
-import PostListItem from '@/components/Posts/PostListItem'
+import PostCard from '@/components/Posts/PostCard'
 import { mapGetters } from 'vuex'
 export default {
   components: {
-    PostListItem
+    PostCard
   },
   computed: {
     ...mapGetters([
-      'loading',
-      'getPosts',
-      'getActivePost'
-    ]),
+      'getPosts'
+    ])
   },
   metaInfo: {
     title: 'Home',
-    titleTemplate: '%s | '+ process.env.VUE_APP_TITLE
+    titleTemplate: '%s | ' + process.env.VUE_APP_TITLE
   }
 }
 </script>
