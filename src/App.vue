@@ -1,14 +1,11 @@
 <template>
   <div class="container min-h-screen min-w-full bg-gray-100">
     <h1>{{ greeting }}</h1>
-    <div v-if="!loading">
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
   name: 'App',
   metaInfo: {
@@ -45,12 +42,7 @@ export default {
     }
   },
   created () {
-    this.$store.dispatch('initCosmic')
-  },
-  computed: {
-    ...mapGetters([
-      'loading'
-    ])
+    this.$store.dispatch('initContentful')
   }
 }
 </script>
