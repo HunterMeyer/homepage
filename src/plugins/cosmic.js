@@ -4,5 +4,4 @@ const bucket = Cosmic.bucket({
   read_key: process.env.VUE_APP_COSMIC_READ_KEY,
   write_key: process.env.VUE_APP_COSMIC_WRITE_KEY
 })
-console.log(process.env)
 module.exports = bucket
