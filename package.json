@@ -1,0 +1,44 @@
+{
+  "name": "homepage",
+  "version": "0.0.1",
+  "description": "Hunter Meyer's Homepage and Blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HunterMeyer/homepage"
+  },
+  "author": {
+    "name": "Hunter Meyer",
+    "email": "holla@huntermeyer.com",
+    "url": "https://www.huntermeyer.com"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "dev-build": "vue-cli-service build --mode development",
+    "lint": "vue-cli-service lint",
+    "postinstall": "vue-cli-service build"
+  },
+  "dependencies": {
+    "cosmicjs": "^3.2.17",
+    "express": "^4.17.1",
+    "vue": "^2.6.10",
+    "vue-meta": "^2.2.1",
+    "vue-router": "^3.1.2",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.10.0",
+    "@vue/cli-plugin-eslint": "^3.10.0",
+    "@vue/cli-service": "^3.10.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.2.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
