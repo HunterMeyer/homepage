@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div v-for="(post) in posts" :key="post.sys.id">
+  <div class="flex flex-wrap p-4">
+    <div v-for="(post) in posts" :key="post.sys.id" class="w-full md:w-1/3">
       <PostCard :post="post"></PostCard>
     </div>
   </div>
