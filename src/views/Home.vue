@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(post) in getPosts" :key="post.sys.id">
+    <div v-for="(post) in posts" :key="post.sys.id">
       <PostCard :post="post"></PostCard>
     </div>
   </div>
@@ -10,12 +10,16 @@
 import PostCard from '@/components/Posts/PostCard'
 import { mapGetters } from 'vuex'
 export default {
+  name: 'Home',
   components: {
     PostCard
   },
+  created () {
+    this.$store.dispatch('getPosts')
+  },
   computed: {
     ...mapGetters([
-      'getPosts'
+      'posts'
     ])
   },
   metaInfo: {
