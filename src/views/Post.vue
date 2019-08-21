@@ -2,9 +2,6 @@
   <div v-if="!isLoading && currentPost">
     <PostContent :post="currentPost" />
   </div>
-  <div v-else>
-    Loading...
-  </div>
 </template>
 
 <script>
