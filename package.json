@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node app.js",
     "serve": "yarn run build && vue-cli-service serve",
-    "dev": "vue-cli-service serve",
+    "dev": "yarn run dev-build && vue-cli-service serve",
     "build": "vue-cli-service build && yarn run build:css",
     "dev-build": "vue-cli-service build --mode development",
     "lint": "vue-cli-service lint",
