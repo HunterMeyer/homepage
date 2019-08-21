@@ -1,14 +1,10 @@
 <template>
   <div class="container min-h-screen min-w-full bg-gray-100">
-    <h1>{{ greeting }}</h1>
-    <div v-if="!loading">
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
   name: 'App',
   metaInfo: {
@@ -38,19 +34,6 @@ export default {
       { name: 'description', itemprop: 'description', content: process.env.VUE_APP_META_DESC },
       { itemprop: 'image', content: 'https://www.'+process.env.VUE_APP_META_LOGO }
     ]
-  },
-  data () {
-    return {
-      greeting: "Welcome to the Homepage"
-    }
-  },
-  created () {
-    this.$store.dispatch('initCosmic')
-  },
-  computed: {
-    ...mapGetters([
-      'loading'
-    ])
   }
 }
 </script>

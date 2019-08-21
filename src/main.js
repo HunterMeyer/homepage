@@ -1,16 +1,15 @@
-// main.js
 import Vue from 'vue'
 import App from './App.vue'
 import './plugins'
 import router from '@/router'
 import store from '@/store/index'
 import '@/assets/css/tailwind.css'
-
-// Global Components
-import PostDialog from '@/components/Posts/PostDialog'
-Vue.component('app-post-dialog', PostDialog)
-
+ 
 Vue.config.productionTip = false
+
+// Filters
+import DateFilter from '@/filters/Date'
+Vue.filter('date', DateFilter)
 
 new Vue({
   router,

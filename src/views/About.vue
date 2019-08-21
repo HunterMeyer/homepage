@@ -11,9 +11,9 @@
 </template>
 <script>
   export default {
-    metaInfo: () => ({
+    metaInfo: {
       title: 'About',
       titleTemplate: '%s | '+ process.env.VUE_APP_TITLE
-    })
+    }
   }
 </script>
