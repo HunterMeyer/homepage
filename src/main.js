@@ -4,7 +4,7 @@ import './plugins'
 import router from '@/router'
 import store from '@/store/index'
 import '@/assets/css/tailwind.css'
-
+ 
 Vue.config.productionTip = false
 
 // Filters
