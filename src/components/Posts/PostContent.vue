@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { BLOCKS } from '@contentful/rich-text-types'
+import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 
 const renderOptions = {
@@ -15,6 +15,9 @@ const renderOptions = {
       let { file, title } = node.data.target.fields
       return `<img src=${file.url} title=${title} />`
     }
+  },
+  renderMark: {
+    [MARKS.CODE]: text => `<pre><code>${text}</code></pre>`
   }
 }
 
@@ -29,6 +32,12 @@ export default {
   computed: {
     content() {
       return documentToHtmlString(this.post.fields.content, renderOptions)
+    }
+  },
+  metaInfo() {
+    return {
+      title: this.post.fields.title,
+      titleTemplate: '%s | ' + process.env.VUE_APP_TITLE
     }
   }
 }

@@ -1,9 +1,9 @@
 <template>
-  <div v-if="isLoading">
-    Loading...
+  <div v-if="!isLoading && currentPost">
+    <PostContent :post="currentPost" />
   </div>
   <div v-else>
-    <PostContent :post="currentPost" />
+    Loading...
   </div>
 </template>
 
@@ -26,14 +26,8 @@ export default {
       'isLoading'
     ])
   },
-  created () {
+  created() {
     this.$store.dispatch('getPostBySlug', this.slug)
-  },
-  metaInfo () {
-    return {
-      title: this.currentPost.fields.title,
-      titleTemplate: '%s | ' + process.env.VUE_APP_TITLE
-    }
   }
 }
 </script>
