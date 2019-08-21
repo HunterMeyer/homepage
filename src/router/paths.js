@@ -18,9 +18,10 @@ export default [
     component: loadView('Home')
   },
   {
-    path: '/post/:id',
+    path: '/posts/:slug',
     name: 'Post',
-    component: loadView('Home')
+    component: loadView('Post'),
+    props: true
   },
   {
     path: '/about',
