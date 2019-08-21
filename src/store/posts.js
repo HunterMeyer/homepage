@@ -33,10 +33,12 @@ export const actions = {
     commit('setCurrentPost', response.items[0])
     commit('setLoading', false)
   },
-  async getPosts({commit}) {
+  async getPosts({commit}, limit = 4) {
     commit('setLoading', true);
     const response = await contentful.getEntries({
-      content_type: 'post'
+      content_type: 'post',
+      limit: limit,
+      order: '-sys.createdAt'
     })
     commit('setPosts', response.items)
   }
