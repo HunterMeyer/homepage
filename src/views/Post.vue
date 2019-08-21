@@ -42,16 +42,14 @@ export default {
       }
     }
   },
-  watch: {
-    currentPost: function (newValue) {
-      this.$route.meta.title = newValue.fields.title
-    }
-  },
   created () {
     this.$store.dispatch('getPostBySlug', this.slug)
   },
-  metaInfo: {
-    titleTemplate: '%s | ' + process.env.VUE_APP_TITLE
+  metaInfo () {
+    return {
+      title: this.currentPost.fields.title,
+      titleTemplate: '%s | ' + process.env.VUE_APP_TITLE
+    }
   }
 }
 </script>
