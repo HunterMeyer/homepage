@@ -27,7 +27,10 @@ const renderOptions = {
       let { file, title } = node.data.target.fields
       return `<img src=${file.url} title=${title} />`
     },
-    [BLOCKS.PARAGRAPH]: (node, next) => `<p class="py-2">${next(node.content)}</p>`,
+    [BLOCKS.PARAGRAPH]: (node, next) => {
+      let parsedBackticks = next(node.content).replace(/`(.*?)`/g, "<span class='inline-code'>$1</span>")
+      return `<p class="py-2">${parsedBackticks}</p>`
+    },
     [BLOCKS.HEADING_1]: node => `<div class="font-semibold text-3xl">${node.content[0].value}</div>`,
     [BLOCKS.HEADING_2]: node => `<div class="font-semibold text-2xl">${node.content[0].value}</div>`,
     [BLOCKS.HEADING_3]: node => `<div class="font-semibold text-xl">${node.content[0].value}</div>`,
@@ -82,5 +85,16 @@ export default {
     }
   }
 }
-
 </script>
+
+<style scope>
+  .inline-code {
+    background: #c2c9d8;
+    border-radius: .2rem;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 14px;
+    padding: .1rem .4rem;
+    text-align: center;
+  }
+
+</style>
