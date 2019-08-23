@@ -4,6 +4,7 @@ import './plugins'
 import router from '@/router'
 import store from '@/store/index'
 import '@/assets/css/tailwind.css'
+import '@/assets/css/styles.css'
  
 Vue.config.productionTip = false
 
