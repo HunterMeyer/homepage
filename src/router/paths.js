@@ -18,15 +18,15 @@ export default [
     component: loadView('Home')
   },
   {
+    path: '/posts',
+    name: 'Posts',
+    component: loadView('Posts')
+  },
+  {
     path: '/posts/:slug',
     name: 'Post',
     component: loadView('Post'),
     props: true
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: loadView('About')
   },
   {
     path: '/404',

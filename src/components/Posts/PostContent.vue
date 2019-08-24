@@ -2,7 +2,7 @@
   <div class="px-10 mx-auto">
     <div class="flex">
       <div class="w-full py-10 text-center">
-        <div class="text-4xl leading-none">{{ post.fields.title }}</div>
+        <h1 class="text-4xl leading-none">{{ post.fields.title }}</h1>
         <div class="text-sm text-gray-500 mt-3">by {{ post.fields.author }} on {{ post.sys.createdAt | date }}</div>
         <div v-if="tags.length > 0" class="mt-3">
           <span v-for="(tag, index) in tags" :key="index" class="inline-block rounded-full bg-gray-200 text-gray-600 text-xs font-semibold uppercase px-3 py-1 m-1">#{{ tag }}</span>
@@ -31,10 +31,10 @@ const renderOptions = {
       let parsedBackticks = next(node.content).replace(/`(.*?)`/g, "<span class='inline-code'>$1</span>")
       return `<p class="py-2">${parsedBackticks}</p>`
     },
-    [BLOCKS.HEADING_1]: node => `<div class="font-semibold text-3xl">${node.content[0].value}</div>`,
-    [BLOCKS.HEADING_2]: node => `<div class="font-semibold text-2xl">${node.content[0].value}</div>`,
-    [BLOCKS.HEADING_3]: node => `<div class="font-semibold text-xl">${node.content[0].value}</div>`,
-    [BLOCKS.HEADING_4]: node => `<div class="font-semibold text-lg">${node.content[0].value}</div>`,
+    [BLOCKS.HEADING_1]: node => `<h1 class="font-semibold text-3xl">${node.content[0].value}</h1>`,
+    [BLOCKS.HEADING_2]: node => `<h2 class="font-semibold text-2xl">${node.content[0].value}</h2>`,
+    [BLOCKS.HEADING_3]: node => `<h3 class="font-semibold text-xl">${node.content[0].value}</h3>`,
+    [BLOCKS.HEADING_4]: node => `<h4 class="font-semibold text-lg">${node.content[0].value}</h4>`,
     [INLINES.HYPERLINK]: node => {
       let title = node.content[0].value
       let url = node.data.uri

@@ -1,12 +1,15 @@
 <template>
-  <div class="container min-h-screen min-w-full bg-gray-100">
+  <div class="container min-h-screen min-w-full bg-gray-100 pb-20">
+    <TheNavbar />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import TheNavbar from '@/components/TheNavbar'
 export default {
   name: 'App',
+  components: { TheNavbar },
   metaInfo: {
     title: 'App',
     titleTemplate: '%s | ' + process.env.VUE_APP_TITLE,

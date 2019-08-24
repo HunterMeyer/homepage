@@ -1,27 +1,12 @@
 <template>
-  <div class="flex flex-wrap p-4">
-    <div v-for="(post) in posts" :key="post.sys.id" class="w-full md:w-1/3">
-      <PostCard :post="post"></PostCard>
-    </div>
+  <div class="flex flex-wrap p-6 bg-gray-700">
+    <h1 class="text-4xl text-white">I'm Hunter Meyer</h1>
   </div>
 </template>
 
 <script>
-import PostCard from '@/components/Posts/PostCard'
-import { mapGetters } from 'vuex'
 export default {
   name: 'Home',
-  components: {
-    PostCard
-  },
-  created () {
-    this.$store.dispatch('getPosts')
-  },
-  computed: {
-    ...mapGetters([
-      'posts'
-    ])
-  },
   metaInfo: {
     title: 'Home',
     titleTemplate: '%s | ' + process.env.VUE_APP_TITLE
