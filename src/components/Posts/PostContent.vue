@@ -1,5 +1,5 @@
 <template>
-  <div class="px-10 mx-auto">
+  <div class="mx-auto">
     <div class="flex">
       <div class="w-full py-10 text-center">
         <h1 class="text-4xl leading-none">{{ post.fields.title }}</h1>
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="flex">
-      <div class="w-full lg:w-2/3 bg-white rounded shadow-lg px-10 py-8 mx-auto">
+      <div class="w-full md:w-2/3 bg-white rounded shadow-lg px-10 py-8 mx-auto">
         <div v-html="content"></div>
       </div>
     </div>
