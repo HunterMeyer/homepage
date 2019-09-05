@@ -22,6 +22,7 @@ export default {
     return {
       paths: [
         { to: '/', title: 'Home', exact: true },
+        { to: '/projects', title: 'Projects', exact: false },
         { to: '/posts', title: 'Blog', exact: false }
       ]
     }
