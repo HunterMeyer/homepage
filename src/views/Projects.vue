@@ -14,14 +14,12 @@
 </template>
 
 <script>
+import projects from '@/data/projects.json'
 export default {
   name: 'Projects',
   data() {
     return {
-      projects: [
-        { name: 'Jr.DevJobs', subtitle: 'Jobs for Junior Developers', slug: 'jrdevjobs' },
-        { name: 'MonthlyStash', subtitle: 'Discreet Subscription Box', slug: 'monthly-stash' }
-      ]
+      projects
     }
   },
   metaInfo: {
