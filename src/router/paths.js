@@ -11,7 +11,12 @@ function loadView (view) {
   return () => import(/* webpackChunkName: "view-[request]" */ `@/views/${view}.vue`)
 }
 
-export default [
+const projectPaths = [
+  { slug: 'jrdevjobs', view: 'JrDevJobs' },
+  { slug: 'monthly-stash', view: 'MonthlyStash' }
+]
+
+const paths = [
   {
     path: '/',
     name: 'Home',
@@ -29,6 +34,11 @@ export default [
     props: true
   },
   {
+    path: '/projects',
+    name: 'Projects',
+    component: loadView('Projects')
+  },
+  {
     path: '/404',
     name: 'Not Found',
     component: loadView('404')
@@ -38,3 +48,13 @@ export default [
     redirect: '/404'
   }
 ]
+
+projectPaths.forEach((path) => {
+  paths.push({
+    path: '/projects/' + path.slug,
+    name: path.view,
+    component: loadView('projects/' + path.view)
+  })
+})
+
+export default paths
