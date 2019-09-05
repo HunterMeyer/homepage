@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex flex-wrap">
     <div
       v-for="(color, index) in colors"
       :key="index"
@@ -21,11 +21,11 @@ export default {
     },
     wrapperClass: {
       type: String,
-      default: "w-1/3 m-3"
+      default: "w-1/3 p-2"
     },
     labelClass: {
       type: String,
-      default: "text-sm text-gray-500"
+      default: "text-sm text-gray-600"
     }
   }
 }
