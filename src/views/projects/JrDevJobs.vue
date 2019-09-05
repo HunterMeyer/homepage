@@ -6,9 +6,9 @@
         <div class="text-sm text-gray-500 mt-3">Jobs for Junior Developers</div>
       </div>
     </div>
-    <div class="md:mx-4 px-10 py-8 mx-auto">
+    <div class="px-4 py-8 mx-auto max-w-5xl">
       <div class="flex flex-wrap">
-        <div class="w-full md:w-2/3 px-2">
+        <div class="w-full md:w-2/3 px-2 mb-4 md:mb-0">
           <div class="mb-4">
             <h2 class="text-3xl mb-2 text-gray-700">Elevator Pitch</h2>
             <p class="text-gray-600">
