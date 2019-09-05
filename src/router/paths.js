@@ -11,10 +11,7 @@ function loadView (view) {
   return () => import(/* webpackChunkName: "view-[request]" */ `@/views/${view}.vue`)
 }
 
-const projectPaths = [
-  { slug: 'jrdevjobs', view: 'JrDevJobs' },
-  { slug: 'monthly-stash', view: 'MonthlyStash' }
-]
+import projects from '@/data/projects.json'
 
 const paths = [
   {
@@ -49,11 +46,11 @@ const paths = [
   }
 ]
 
-projectPaths.forEach((path) => {
+projects.forEach((project) => {
   paths.push({
-    path: '/projects/' + path.slug,
-    name: path.view,
-    component: loadView('projects/' + path.view)
+    path: '/projects/' + project.slug,
+    name: project.view,
+    component: loadView('projects/' + project.view)
   })
 })
 
