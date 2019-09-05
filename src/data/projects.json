@@ -1,0 +1,14 @@
+[
+  { 
+    "name": "Jr.DevJobs",
+    "subtitle": "Jobs for Junior Developers",
+    "slug": "jrdevjobs",
+    "view": "JrDevJobs"
+  },
+  {
+    "name": "MonthlyStash",
+    "subtitle": "Discreet Subscription Box",
+    "slug": "monthly-stash",
+    "view": "MonthlyStash"
+  }
+]
