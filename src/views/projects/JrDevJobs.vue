@@ -2,6 +2,18 @@
   <div class="mx-auto">
     <section class="hero-bg mb-10 sm:mb-0">
       <div class="flex flex-wrap mx-auto max-w-5xl px-4">
+        <!-- Centered Box; Left-Aligned Text -->
+        <div class="hidden">
+          <div class="flex w-full sm:w-1/2 self-center mx-auto pb-2 pt-10 sm:pt-2">
+            <div class="flex text-white items-start flex-wrap flex-col mx-auto">
+              <p class="leading-none font-thin uppercase text-teal-200" style="letter-spacing: 1rem;">Project</p>
+              <h1 class="text-6xl font-semibold leading-none">Jr.DevJobs</h1>
+              <h2 class="text-3xl font-thin leading-none">Jobs for Junior Developers</h2>
+            </div>
+          </div>
+        </div>
+        <!-- End Centered Box; Left-Aligned Text -->
+        <!-- Centered Box and Text -->
         <div class="w-full sm:w-1/2 self-center pb-2 pt-10 sm:pt-2">
           <div class="text-center text-white">
             <p class="leading-none font-thin uppercase text-teal-200" style="letter-spacing:1rem;">Project</p>
@@ -9,6 +21,7 @@
             <h2 class="text-3xl font-thin leading-none">Jobs for Junior Developers</h2>
           </div>
         </div>
+        <!-- End Centered Box and Text -->
         <div class="w-full sm:w-1/2 self-center -mb-32">
           <div class="relative">
             <img alt="Image placeholder" src="/images/iphone.png" class="mx-auto" style="max-width:90%; height:auto">
