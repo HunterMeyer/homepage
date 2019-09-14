@@ -21,21 +21,11 @@
                 readable English
               </p>
             </div>
-            <div>
-              <h2 :class="currentStyle.headingColor" class="text-3xl mb-2">Features</h2>
-              <p :class="currentStyle.paragraphColor">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
-                sed do eiusmod tempor incididunt ut labore<br>
-                Ut enim ad minim veniam<br>
-                quis nostrud exercitation ullamco laboris nisi ut aliquip<br>
-                Duis aute irure dolor in reprehenderi<br>
-              </p>
-            </div>
           </div>
           <div class="w-full md:w-1/3 px-2">
             <div class="bg-white rounded shadow-lg px-1">
               <div class="pb-5">
-                <div class="text-sm tracking-wider text-gray-500 px-3 pt-3 pb-2">Color Palette</div>
+                <div class="text-sm tracking-wider text-gray-500 uppercase px-3 pt-3 pb-2">Color Palette</div>
                 <div class="px-1">
                   <ColorPalette
                     :colors="['#e49135', '#fff', '#e6e6e6']"
@@ -44,15 +34,28 @@
                 </div>
               </div>
               <div class="pb-5">
-                <div class="text-sm tracking-wider text-gray-500 px-3 pb-2">Font Family</div>
-                <div style="font-size: 60px" class="px-3 leading-none">
-                  Spinnaker
-                </div>
+                <div class="text-sm tracking-wider text-gray-500 uppercase px-3 pb-2">Logo</div>
+                <div class="text-xs italic text-gray-500 px-3">Coming Soon...</div>
               </div>
-              <div class="pb-5">
-                <div class="text-sm tracking-wider text-gray-500 px-3 pb-2">Logo</div>
-                <div class="italic text-gray-500 px-3">Coming Soon...</div>
-              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-red-400">
+      <div class="flex flex-wrap items-center max-w-5xl mx-auto px-4">
+        <div class="w-full md:w-1/2">
+          <img src="/images/iphone.png" class="mx-auto" style="max-height:600px;">
+        </div>
+        <div class="w-full md:w-1/2 px-2">
+          <div class="bg-white p-4 mb-6 md:mb-0 rounded shadow-xl">
+            <div class="text-sm text-red-600 tracking-wider uppercase">Features</div>
+            <div class="text-4xl text-gray-700 mb-1">Search Engine</div>
+            <div class="text-base text-gray-600">
+              Full-text search and easy filtering. We built a backend that automatically
+              formats and extracts data such as location, education requirements, skills,
+              and other requirements relevant to job hunting.
             </div>
           </div>
         </div>
