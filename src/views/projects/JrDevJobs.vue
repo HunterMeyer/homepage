@@ -4,7 +4,7 @@
       label="Project"
       title="Jr.DevJobs"
       subtitle="Jobs for Junior Developers"
-      image="/images/iphone.png"
+      image="/images/hero-jrdevjobs.png"
       :styles="currentStyle.hero"
     />
     <div :style="{ background: currentStyle.backgroundColor }">
@@ -43,15 +43,15 @@
       </div>
     </div>
 
-    <div class="bg-red-400">
+    <div style="background: #e6e6e6">
       <div class="flex flex-wrap items-center max-w-5xl mx-auto px-4">
         <div class="w-full md:w-1/2">
-          <img src="/images/iphone.png" class="mx-auto" style="max-height:600px;">
+          <img src="/images/hero-jrdevjobs.png">
         </div>
         <div class="w-full md:w-1/2 px-2">
           <div class="bg-white p-4 mb-6 md:mb-0 rounded shadow-xl">
-            <div class="text-sm text-red-600 tracking-wider uppercase">Features</div>
-            <div class="text-4xl text-gray-700 mb-1">Search Engine</div>
+            <div class="text-sm tracking-wider uppercase" style="color: #e49135;">Features</div>
+            <div class="text-4xl text-gray-700 mb-1">Job Search Engine</div>
             <div class="text-base text-gray-600">
               Full-text search and easy filtering. We built a backend that automatically
               formats and extracts data such as location, education requirements, skills,
@@ -92,9 +92,9 @@ export default {
   styles:{
     light: {
       hero: {
-        backgroundColors: ['#63c3da', '#81e6d9'],
+        backgroundColors: ['#f18d04', '#f1ca95'],
         titleColor: 'text-white',
-        labelColor: 'text-teal-200',
+        labelColor: 'text-orange-300',
         swirlColor: '#f7fafc'
       },
       backgroundColor: '#f7fafc',
