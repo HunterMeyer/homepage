@@ -4,7 +4,7 @@
       label="Project"
       title="Jr.DevJobs"
       subtitle="Jobs for Junior Developers"
-      image="/images/hero-jrdevjobs.png"
+      image="/images/projects/hero-jrdevjobs.png"
       :styles="currentStyle.hero"
     />
     <div :style="{ background: currentStyle.backgroundColor }">
@@ -28,14 +28,14 @@
                 <div class="text-sm tracking-wider text-gray-500 uppercase px-3 pt-3 pb-2">Color Palette</div>
                 <div class="px-1">
                   <ColorPalette
-                    :colors="['#e49135', '#fff', '#e6e6e6']"
+                    :colors="['#e49135', '#525252', '#fff']"
                     labelClass="text-xs text-gray-600"
                   />
                 </div>
               </div>
               <div class="pb-5">
                 <div class="text-sm tracking-wider text-gray-500 uppercase px-3 pb-2">Logo</div>
-                <div class="text-xs italic text-gray-500 px-3">Coming Soon...</div>
+                <img src="/images/projects/logo-jrdevjobs.png" class="w-full px-3" />
               </div>
             </div>
           </div>
@@ -43,13 +43,13 @@
       </div>
     </div>
 
-    <div style="background: #e6e6e6;" class="mb-0 mt-20 md:mb-20">
+    <div style="background: #525252;" class="mb-0 mt-20 md:mb-20">
       <svg class="-my-10" width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
         <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="#f7fafc"/>
       </svg>
       <div class="flex flex-wrap items-center max-w-5xl mx-auto px-4">
         <div class="w-full md:w-1/2 -mb-0 -mt-20 md:-mb-20">
-          <img src="/images/hero-jrdevjobs.png" class="mx-auto md:mx-0 relative">
+          <img src="/images/projects/hero-jrdevjobs.png" class="mx-auto md:mx-0 relative">
         </div>
         <div class="w-full md:w-1/2 px-2 mb-10 md:mb-0">
           <div class="bg-white p-4 rounded shadow-2xl">

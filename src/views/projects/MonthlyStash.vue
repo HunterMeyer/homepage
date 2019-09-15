@@ -4,7 +4,7 @@
       label="Project"
       title="MonthlyStash"
       subtitle="The Head Shop Subscription Box"
-      image="/images/hero-monthlystash.png"
+      image="/images/projects/hero-monthlystash.png"
       :styles="currentStyle.hero"
     />
     <div :style="{ background: currentStyle.backgroundColor }">
@@ -35,7 +35,7 @@
               </div>
               <div class="pb-5">
                 <div class="text-sm tracking-wider text-gray-500 uppercase px-3 pb-2">Logo</div>
-                <div class="text-xs italic text-gray-500 px-3">Coming Soon...</div>
+                <img src="/images/projects/logo-monthlystash.png" class="w-full px-3" />
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@
       </svg>
       <div class="flex flex-wrap items-center max-w-5xl mx-auto px-4">
         <div class="w-full md:w-1/2 -mb-0 -mt-20 md:-mb-20">
-          <img src="/images/hero-jrdevjobs.png" class="mx-auto md:mx-0 relative">
+          <img src="/images/projects/hero-monthlystash.png" class="mx-auto md:mx-0 relative">
         </div>
         <div class="w-full md:w-1/2 px-2 mb-10 md:mb-0">
           <div class="bg-white p-4 rounded shadow-2xl">
