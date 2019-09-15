@@ -43,13 +43,16 @@
       </div>
     </div>
 
-    <div style="background: #8e77cc;">
+    <div style="background: #8e77cc;" class="mb-0 mt-20 md:mb-20">
+      <svg class="-my-10" width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
+        <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="#f7fafc"/>
+      </svg>
       <div class="flex flex-wrap items-center max-w-5xl mx-auto px-4">
-        <div class="w-full md:w-1/2">
-          <img src="/images/hero-jrdevjobs.png">
+        <div class="w-full md:w-1/2 -mb-0 -mt-20 md:-mb-20">
+          <img src="/images/hero-jrdevjobs.png" class="mx-auto md:mx-0 relative">
         </div>
-        <div class="w-full md:w-1/2 px-2">
-          <div class="bg-white p-4 mb-6 md:mb-0 rounded shadow-xl">
+        <div class="w-full md:w-1/2 px-2 mb-10 md:mb-0">
+          <div class="bg-white p-4 rounded shadow-2xl">
             <div class="text-sm tracking-wider uppercase" style="color: #8e77cc;">Features</div>
             <div class="text-4xl text-gray-700 mb-1">Search Engine</div>
             <div class="text-base text-gray-600">
@@ -60,6 +63,9 @@
           </div>
         </div>
       </div>
+      <svg class="hidden md:block -my-10" width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
+        <path d="M0,80 L0,40 Q250,0 500,40 L500,80 Z" fill="#f7fafc"/>
+      </svg>
     </div>
   </div>
 </template>
