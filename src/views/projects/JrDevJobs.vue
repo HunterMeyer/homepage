@@ -43,27 +43,28 @@
       </div>
     </div>
 
-    <div style="background: #525252;" class="mb-0 mt-20 md:mb-20">
-      <svg class="-my-10" width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
+    <div style="background: #525252;" class="mb-0 mt-32 md:mt-10">
+      <svg class="-my-10" width="100%" height="100%" viewBox="0 0 500 80" preserveAspectRatio="none">
         <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="#f7fafc"/>
       </svg>
       <div class="flex flex-wrap items-center max-w-5xl mx-auto px-4">
         <div class="w-full md:w-1/2 -mb-0 -mt-20 md:-mb-20">
-          <img src="/images/projects/hero-jrdevjobs.png" class="mx-auto md:mx-0 relative">
+          <img src="/images/projects/project-highlights-perspective-jrdevjobs.png" class="mx-auto md:mx-0 relative">
         </div>
         <div class="w-full md:w-1/2 px-2 mb-10 md:mb-0">
-          <div class="bg-white p-4 rounded shadow-2xl">
-            <div class="text-sm tracking-wider uppercase" style="color: #e49135;">Features</div>
-            <div class="text-4xl text-gray-700 mb-1">Search Engine</div>
+          <div class="bg-white p-4 rounded shadow-md relative">
+            <div class="text-sm tracking-wider uppercase text-orange-500">Features</div>
+            <div class="text-4xl text-gray-700 mb-1">Custom Profiles</div>
             <div class="text-base text-gray-600">
-              Full-text search and easy filtering. We built a backend that automatically
-              formats and extracts data such as location, education requirements, skills,
-              and other requirements relevant to job hunting.
+              We built beautiful profiles for both <span class="text-orange-500">job seekers</span>
+              and <span class="text-orange-500">companies</span>! Each had custom colors, avatars,
+              and content. Job seekers could show off their projects, education, and code samples,
+              while companies could show off their culture, benefits, and open positions.
             </div>
           </div>
         </div>
       </div>
-      <svg class="hidden md:block -my-10" width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
+      <svg class="hidden md:block -my-10" width="100%" height="100%" viewBox="0 0 500 80" preserveAspectRatio="none">
         <path d="M0,80 L0,40 Q250,0 500,40 L500,80 Z" fill="#f7fafc"/>
       </svg>
     </div>

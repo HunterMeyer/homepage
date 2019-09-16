@@ -52,7 +52,7 @@
           <img src="/images/projects/hero-monthlystash.png" class="mx-auto md:mx-0 relative">
         </div>
         <div class="w-full md:w-1/2 px-2 mb-10 md:mb-0">
-          <div class="bg-white p-4 rounded shadow-2xl">
+          <div class="bg-white p-4 rounded shadow-md relative">
             <div class="text-sm tracking-wider uppercase" style="color: #8e77cc;">Features</div>
             <div class="text-4xl text-gray-700 mb-1">Search Engine</div>
             <div class="text-base text-gray-600">
