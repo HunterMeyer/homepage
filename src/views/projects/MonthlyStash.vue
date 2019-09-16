@@ -8,11 +8,11 @@
       :styles="currentStyle.hero"
     />
     <div :style="{ background: currentStyle.backgroundColor }">
-      <div class="px-4 pt-32 md:pt-16 pb-8 mx-auto max-w-5xl">
+      <div class="px-4 pt-24 md:pt-16 pb-8 mx-auto max-w-5xl">
         <div class="flex flex-wrap">
           <div class="w-full md:w-2/3 md:pr-2 mb-4 md:mb-0">
-            <h2 :class="currentStyle.headingColor" class="text-3xl mb-2" @click="toggleDarkMode">Elevator Pitch</h2>
-            <p :class="currentStyle.paragraphColor">
+            <div @click="toggleDarkMode" :class="currentStyle.headingColor" class="text-lg tracking-wider uppercase mb-1">Elevator Pitch</div>
+            <p :class="currentStyle.paragraphColor" class="leading-relaxed">
               It is a long established fact that a reader will be distracted by the
               readable content of a page when looking at its layout. The point of using
               Lorem Ipsum is that it has a more-or-less normal distribution of letters,
@@ -22,11 +22,11 @@
           </div>
           <div class="w-full md:w-1/3">
             <div class="mb-5">
-              <div class="text-sm text-gray-500 tracking-wider uppercase">Logo</div>
+              <div :class="currentStyle.headingColor" class="text-lg tracking-wider uppercase">Logo</div>
               <img src="/images/projects/logo-monthlystash.png" class="w-full pt-2" />
             </div>
             <div>
-              <div class="text-sm text-gray-500 tracking-wider uppercase">Color Palette</div>
+              <div :class="currentStyle.headingColor" class="text-lg tracking-wider uppercase">Color Palette</div>
               <ColorPalette
                 :colors="['#55ab68', '#8e77cc', '#f5f5f5']"
                 labelClass="text-xs text-gray-600"
@@ -94,12 +94,12 @@ export default {
       hero: {
         backgroundColors: ['#1e9650', '#a7fdc9'],
         titleColor: 'text-white',
-        labelColor: 'text-green-200',
+        labelColor: 'text-green-700',
         swirlColor: '#f7fafc'
       },
       backgroundColor: '#f7fafc',
-      headingColor: 'text-gray-700',
-      paragraphColor: 'text-gray-600'
+      headingColor: 'text-gray-500',
+      paragraphColor: 'text-gray-700'
     },
     dark: {
       hero: {
