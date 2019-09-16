@@ -4,7 +4,7 @@
       <div class="w-full sm:w-1/2 self-center pb-2 pt-10 sm:pt-2">
         <div :class="titleColor" class="text-center">
           <p v-if="label" :class="labelColor" class="leading-none font-thin uppercase" style="letter-spacing:1rem;margin-left:1rem;">{{ label }}</p>
-          <h1 class="text-6xl font-semibold leading-none mb-1">{{ title }}</h1>
+          <h1 class="text-5xl md:text-6xl font-semibold leading-none mb-1">{{ title }}</h1>
           <h2 v-if="subtitle" class="text-3xl font-thin leading-none">{{ subtitle }}</h2>
         </div>
       </div>

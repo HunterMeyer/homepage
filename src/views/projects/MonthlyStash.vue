@@ -8,7 +8,7 @@
       :styles="currentStyle.hero"
     />
     <div :style="{ background: currentStyle.backgroundColor }">
-      <div class="px-4 pt-16 pb-8 mx-auto max-w-5xl">
+      <div class="px-4 pt-32 md:pt-16 pb-8 mx-auto max-w-5xl">
         <div class="flex flex-wrap">
           <div class="w-full md:w-2/3 md:pr-2 mb-4 md:mb-0">
             <h2 :class="currentStyle.headingColor" class="text-3xl mb-2" @click="toggleDarkMode">Elevator Pitch</h2>
