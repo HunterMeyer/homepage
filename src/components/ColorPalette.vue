@@ -5,7 +5,7 @@
       :key="index"
       :class="wrapperClass"
     >
-      <div class="square rounded shadow" :style="{ backgroundColor: color }"></div>
+      <div class="color-palette-color rounded shadow" :style="{ backgroundColor: color }"></div>
       <span :class="labelClass">{{ color }}</span>
     </div> 
   </div>
@@ -32,8 +32,8 @@ export default {
 </script>
 
 <style>
-  .square {
-    padding-top: 100%;
+  .color-palette-color {
+    padding-top: 50%;
   }
 </style>
 

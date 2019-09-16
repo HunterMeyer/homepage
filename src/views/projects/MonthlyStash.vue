@@ -24,18 +24,18 @@
           </div>
           <div class="w-full md:w-1/3 px-2">
             <div class="bg-white rounded shadow-lg px-1">
-              <div class="pb-5">
-                <div class="text-sm tracking-wider text-gray-500 uppercase px-3 pt-3 pb-2">Color Palette</div>
+              <div class="pb-5 pt-3">
+                <div class="text-sm tracking-wider text-gray-500 uppercase px-3">Logo</div>
+                <img src="/images/projects/logo-monthlystash.png" class="w-full px-3 pt-2" />
+              </div>
+              <div class="pb-2">
+                <div class="text-sm tracking-wider text-gray-500 uppercase px-3">Color Palette</div>
                 <div class="px-1">
                   <ColorPalette
                     :colors="['#55ab68', '#8e77cc', '#f5f5f5']"
                     labelClass="text-xs text-gray-600"
                   />
                 </div>
-              </div>
-              <div class="pb-5">
-                <div class="text-sm tracking-wider text-gray-500 uppercase px-3 pb-2">Logo</div>
-                <img src="/images/projects/logo-monthlystash.png" class="w-full px-3" />
               </div>
             </div>
           </div>

@@ -24,18 +24,18 @@
           </div>
           <div class="w-full md:w-1/3 px-2">
             <div class="bg-white rounded shadow-lg px-1">
-              <div class="pb-5">
-                <div class="text-sm tracking-wider text-gray-500 uppercase px-3 pt-3 pb-2">Color Palette</div>
+              <div class="pb-5 pt-3">
+                <div class="text-sm tracking-wider text-gray-500 uppercase px-3">Logo</div>
+                <img src="/images/projects/logo-jrdevjobs.png" class="w-full px-3 pt-2" />
+              </div>
+              <div class="pb-2">
+                <div class="text-sm tracking-wider text-gray-500 uppercase px-3">Color Palette</div>
                 <div class="px-1">
                   <ColorPalette
                     :colors="['#e49135', '#525252', '#fff']"
                     labelClass="text-xs text-gray-600"
                   />
                 </div>
-              </div>
-              <div class="pb-5">
-                <div class="text-sm tracking-wider text-gray-500 uppercase px-3 pb-2">Logo</div>
-                <img src="/images/projects/logo-jrdevjobs.png" class="w-full px-3" />
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@
       </svg>
       <div class="flex flex-wrap items-center max-w-5xl mx-auto px-4">
         <div class="w-full md:w-1/2 -mb-0 -mt-20 md:-mb-20">
-          <img src="/images/projects/project-highlights-perspective-jrdevjobs.png" class="mx-auto md:mx-0 relative">
+          <img src="/images/projects/project-highlights-perspective-jrdevjobs.png" class="mx-auto md:mx-0 md:my-5 relative">
         </div>
         <div class="w-full md:w-1/2 px-2 mb-10 md:mb-0">
           <div class="bg-white p-4 rounded shadow-md relative">
