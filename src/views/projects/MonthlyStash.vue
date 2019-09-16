@@ -10,7 +10,7 @@
     <div :style="{ background: currentStyle.backgroundColor }">
       <div class="px-4 pt-24 md:pt-16 pb-8 mx-auto max-w-5xl">
         <div class="flex flex-wrap">
-          <div class="w-full md:w-2/3 md:pr-2 mb-4 md:mb-0">
+          <div class="w-full md:w-2/3 md:pr-12 mb-6 md:mb-0">
             <div @click="toggleDarkMode" :class="currentStyle.headingColor" class="text-lg tracking-wider uppercase mb-1">Elevator Pitch</div>
             <p :class="currentStyle.paragraphColor" class="leading-relaxed">
               It is a long established fact that a reader will be distracted by the
@@ -21,9 +21,9 @@
             </p>
           </div>
           <div class="w-full md:w-1/3">
-            <div class="mb-5">
+            <div class="mb-6">
               <div :class="currentStyle.headingColor" class="text-lg tracking-wider uppercase">Logo</div>
-              <img src="/images/projects/logo-monthlystash.png" class="w-full pt-2" />
+              <img src="/images/projects/logo-monthlystash.png" class="w-full pt-1" />
             </div>
             <div>
               <div :class="currentStyle.headingColor" class="text-lg tracking-wider uppercase">Color Palette</div>
