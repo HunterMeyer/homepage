@@ -1,6 +1,6 @@
 <template>
   <nav class="flex items-center justify-between flex-wrap bg-gray-700 py-4">
-    <div class="flex max-w-5xl w-full mx-auto px-6">
+    <div class="flex max-w-5xl w-full mx-auto px-4">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <span class="font-semibold text-xl tracking-tight">Hunter Meyer</span>
       </div>

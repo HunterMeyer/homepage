@@ -3,7 +3,7 @@
     <div
       v-for="(color, index) in colors"
       :key="index"
-      :class="wrapperClass"
+      class="color-palette w-1/3"
     >
       <div class="color-palette-color rounded shadow" :style="{ backgroundColor: color }"></div>
       <span :class="labelClass">{{ color }}</span>
@@ -19,10 +19,6 @@ export default {
       type: Array,
       required: true
     },
-    wrapperClass: {
-      type: String,
-      default: "w-1/3 p-2"
-    },
     labelClass: {
       type: String,
       default: "text-sm text-gray-600"
@@ -34,6 +30,15 @@ export default {
 <style>
   .color-palette-color {
     padding-top: 50%;
+  }
+  .color-palette {
+    @apply py-2 px-1;
+  }
+  .color-palette:first-child {
+    @apply pr-2 pl-0;
+  }
+  .color-palette:last-child {
+    @apply pr-0 pl-2;
   }
 </style>
 
