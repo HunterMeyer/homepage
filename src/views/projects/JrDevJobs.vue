@@ -43,8 +43,8 @@
       </div>
     </div>
 
-    <div style="background: #525252;" class="mb-0 mt-32 md:mt-10">
-      <svg class="-my-10" width="100%" height="100%" viewBox="0 0 500 80" preserveAspectRatio="none">
+    <div style="background: #525252;" class="mb-0 mt-20 md:mb-20">
+      <svg class="-my-10" width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
         <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="#f7fafc"/>
       </svg>
       <div class="flex flex-wrap items-center max-w-5xl mx-auto px-4">
@@ -64,7 +64,7 @@
           </div>
         </div>
       </div>
-      <svg class="hidden md:block -my-10" width="100%" height="100%" viewBox="0 0 500 80" preserveAspectRatio="none">
+      <svg class="hidden md:block -my-10" width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
         <path d="M0,80 L0,40 Q250,0 500,40 L500,80 Z" fill="#f7fafc"/>
       </svg>
     </div>
