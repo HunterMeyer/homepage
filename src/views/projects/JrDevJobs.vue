@@ -37,15 +37,34 @@
       </div>
     </div>
 
-    <div style="background: #525252;" class="mb-0 mt-20 md:mb-20">
+    <div class="mt-10 md:mt-0 bg-white pt-10 pb-32">
+      <div class="flex flex-wrap-reverse md:flex-wrap items-center max-w-5xl mx-auto px-4">
+        <div class="w-full md:w-1/2 md:px-6 md:mb-0">
+          <div class="relative">
+            <div class="text-sm text-orange-500 tracking-wider uppercase">Features</div>
+            <div class="text-4xl text-gray-700 mb-1">Job Search</div>
+            <div class="text-base text-gray-600">
+              The primary function of the website is searching for a job.
+              We built a fancy <span class="text-orange-500">full-text search engine</span> allowing job seekers to find
+              a job matching their skillset and location.
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <img src="/images/projects/project-highlights-layered-jrdevjobs.png" class="mx-auto md:mx-0 md:my-5 relative">
+        </div>
+      </div>
+    </div>
+
+    <div style="background: #525252;" class="mb-0 md:mb-20">
       <svg class="-my-10" width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
-        <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="#f7fafc"/>
+        <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="#fff"/>
       </svg>
       <div class="flex flex-wrap items-center max-w-5xl mx-auto px-4">
         <div class="w-full md:w-1/2 -mb-0 -mt-20 md:-mb-20">
           <img src="/images/projects/project-highlights-perspective-jrdevjobs.png" class="mx-auto md:mx-0 md:my-5 relative">
         </div>
-        <div class="w-full md:w-1/2 px-2 mb-10 md:mb-0">
+        <div class="w-full md:w-1/2 mb-10 md:mb-0">
           <div class="bg-white p-4 rounded shadow-md relative">
             <div class="text-sm text-orange-500 tracking-wider uppercase">Features</div>
             <div class="text-4xl text-gray-700 mb-1">Custom Profiles</div>
