@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="w-full md:w-1/2">
-          <img src="/images/projects/project-highlights-layered-jrdevjobs.png" class="mx-auto md:mx-0 md:my-5 relative">
+          <img src="/images/projects/project-highlights-search-jrdevjobs.png" class="mb-5 mx-auto md:mx-0 md:my-5 relative">
         </div>
       </div>
     </div>
