@@ -1,7 +1,12 @@
 <template>
   <li class="timeline-item">
     <h4 class="h4 timeline-item-title">
-      <a :href="url" :title="title" target="_blank" class="h4 timeline-item-title">
+      <a
+        :href="url"
+        :title="title"
+        target="_blank"
+        class="h4 timeline-item-title"
+      >
         {{ title }}
       </a>
     </h4>

@@ -14,7 +14,12 @@
       <div class="separator"></div>
       <ul class="social-list">
         <li class="social-item" v-for="link in socialLinks">
-          <a :href="link.url" :title="link.title" target="_blank" class="social-link">
+          <a
+            :href="link.url"
+            :title="link.title"
+            target="_blank"
+            class="social-link"
+          >
             <v-icon :name="link.icon" />
           </a>
         </li>
