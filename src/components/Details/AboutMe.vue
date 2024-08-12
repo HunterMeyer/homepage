@@ -6,79 +6,32 @@
 
     <section class="about-text">
       <p>
-        I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-        I enjoy
-        turning complex problems into simple, beautiful and intuitive designs.
+        <b>Hi there!</b> I am a results-driven software engineer with a decade of experience.
+        I am adept at instituting high-quality coding standards and architecture, resulting
+        in improved performance, code quality, and faster deployments.
+        Proven success in leadership with a background in full-stack development and a
+        track record of delivering impactful projects.
       </p>
 
       <p>
-        My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-        Moreover, I
-        add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-        across your
-        message and identity in the most creative way. I created web design for many famous brand companies.
+        <b>What else?</b> I'm a husband, father, traveler, terrible guitar player,
+        and I love the drums.
       </p>
-    </section>
 
-    <section class="service">
-      <h3 class="h3 service-title">What i'm doing</h3>
+      <p>
+        I also invest in building fast-growing technology companies, with my wife over at
+        <a
+          href="https://www.meyervisions.com"
+          target="_blank"
+          title="MeyerVisions"
+          class="about-link"
+        >
+          <b>Meyer Visions</b>
+        </a>.
+      </p>
 
-      <ul class="service-list">
-        <li class="service-item">
-          <div class="service-icon-box">
-            <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
-          </div>
-
-          <div class="service-content-box">
-            <h4 class="h4 service-item-title">Web design</h4>
-
-            <p class="service-item-text">
-              The most modern and high-quality design made at a professional level.
-            </p>
-          </div>
-        </li>
-
-        <li class="service-item">
-          <div class="service-icon-box">
-            <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-          </div>
-
-          <div class="service-content-box">
-            <h4 class="h4 service-item-title">Web development</h4>
-
-            <p class="service-item-text">
-              High-quality development of sites at the professional level.
-            </p>
-          </div>
-        </li>
-
-        <li class="service-item">
-          <div class="service-icon-box">
-            <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-          </div>
-
-          <div class="service-content-box">
-            <h4 class="h4 service-item-title">Mobile apps</h4>
-
-            <p class="service-item-text">
-              Professional development of applications for iOS and Android.
-            </p>
-          </div>
-        </li>
-
-        <li class="service-item">
-          <div class="service-icon-box">
-            <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-          </div>
-          <div class="service-content-box">
-            <h4 class="h4 service-item-title">Photography</h4>
-
-            <p class="service-item-text">
-              I make high-quality photos of any category at a professional level.
-            </p>
-          </div>
-        </li>
-      </ul>
+      <br>
+      <p>Thanks for stopping by 👋</p>
     </section>
   </article>
 </template>

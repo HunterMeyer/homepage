@@ -347,6 +347,17 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+.about-link {
+  display: inline-block;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  text-decoration: underline;
+}
+.about-link:hover,
+.about-link:focus {
+  color: var(--orange-yellow-crayola);
+}
+
 
 
 /**
