@@ -5,6 +5,5 @@ import Portfolio from "../Details/Portfolio.vue"
 export {
   AboutMe,
   Resume,
-  Portfolio
+  Portfolio,
 }
-

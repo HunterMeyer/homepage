@@ -9,11 +9,11 @@ export default defineConfig({
     vue(),
   ],
   optimizeDeps: {
-    exclude: ["oh-vue-icons/icons"]
+    exclude: ["oh-vue-icons/icons"],
   },
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url))
-    }
-  }
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
+  },
 })

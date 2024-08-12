@@ -1,12 +1,12 @@
 <template>
   <nav class="navbar">
     <ul class="navbar-list">
-      <li class="navbar-item" v-for="item in items">
+      <li v-for="item in items" class="navbar-item">
         <button
           class="navbar-link"
-          :class="{ active: item.id === activeItem.id }"
+          :class="{ active: item.id === activeItemId }"
           :key="item.id"
-          @click.prevent="setActiveItem(item)"
+          @click.prevent="setActiveItem(item.id)"
         >
           {{item.title}}
         </button>
@@ -24,19 +24,19 @@ const props = defineProps({
     type: Array,
     required: true
   },
-  initActiveItem: {
-    type: Object,
+  initActiveItemId: {
+    type: [String, Number],
     required: false,
     default(rawProps) {
-      return rawProps.items[0]
-    }
-  }
+      return rawProps.items[0].id
+    },
+  },
 })
 
-const activeItem = ref(props.initActiveItem)
+const activeItemId = ref(props.initActiveItemId)
 
-const setActiveItem = (item) => {
-  activeItem.value = item
-  emit("itemSelect", item)
+const setActiveItem = (itemId) => {
+  activeItemId.value = itemId
+  emit("itemSelect", itemId)
 }
 </script>

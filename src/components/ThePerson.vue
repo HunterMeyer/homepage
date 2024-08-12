@@ -24,14 +24,14 @@
 </template>
 
 <script setup>
-import { addIcons } from "oh-vue-icons";
-import { CoLinkedinIn, CoGithub, CoStackoverflow } from "oh-vue-icons/icons";
+import { addIcons } from "oh-vue-icons"
+import { CoLinkedinIn, CoGithub, CoStackoverflow } from "oh-vue-icons/icons"
 
-addIcons(CoLinkedinIn, CoGithub, CoStackoverflow);
+addIcons(CoLinkedinIn, CoGithub, CoStackoverflow)
 
 const socialLinks = [
   { icon: "co-linkedin-in", title: "LinkedIn", url: "https://www.linkedin.com/in/hrmeyer" },
   { icon: "co-github", title: "Github", url: "https://github.com/huntermeyer" },
-  { icon: "co-stackoverflow", title: "Stack Overflow", url: "https://stackoverflow.com/users/1953904/hunter" }
+  { icon: "co-stackoverflow", title: "Stack Overflow", url: "https://stackoverflow.com/users/1953904/hunter" },
 ]
 </script>
