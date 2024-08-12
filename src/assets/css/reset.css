@@ -34,6 +34,9 @@ input, textarea {
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
-html { font-family: var(--ff-poppins); }
+html {
+  font-family: var(--ff-poppins);
+  overflow-y: scroll; /* prevent scroll bar from repositioning webpage */
+}
 
 body { background: var(--smoky-black); }

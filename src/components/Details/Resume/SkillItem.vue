@@ -20,7 +20,7 @@ const props = defineProps({
     required: true,
   },
   level: {
-    type: String,
+    type: [String, Number],
     required: true,
   },
 })

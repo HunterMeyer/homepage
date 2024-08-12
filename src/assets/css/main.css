@@ -847,7 +847,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(var(--scale));
-  font-size: 20px;
+  /* font-size: 20px; */
   padding: 18px;
   border-radius: 12px;
   opacity: 0;
@@ -1109,7 +1109,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #PORTFOLIO, BLOG 
    */
 
-  .project-img,
+  /* .project-img, */
   .blog-banner-box { height: auto; }
 
 }
