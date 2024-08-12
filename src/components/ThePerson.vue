@@ -13,7 +13,10 @@
     <div class="sidebar-info_more">
       <div class="separator"></div>
       <ul class="social-list">
-        <li class="social-item" v-for="link in socialLinks">
+        <li class="social-item"
+          v-for="(link, index) in socialLinks"
+          :key="index"
+        >
           <a
             :href="link.url"
             :title="link.title"

@@ -9,7 +9,8 @@
 
     <ol class="timeline-list">
       <TimelineItem
-        v-for="item in items"
+        v-for="(item, index) in items"
+        :key="index"
         :title="item.school"
         :subtitle="item.degree"
         :dates="item.dates"

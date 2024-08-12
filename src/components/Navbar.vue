@@ -1,11 +1,14 @@
 <template>
   <nav class="navbar">
     <ul class="navbar-list">
-      <li v-for="item in items" class="navbar-item">
+      <li
+        v-for="(item, index) in items"
+        :key="index"
+        class="navbar-item"
+      >
         <button
           class="navbar-link"
           :class="{ active: item.id === activeItemId }"
-          :key="item.id"
           @click.prevent="setActiveItem(item.id)"
         >
           {{item.title}}
@@ -22,7 +25,7 @@ const emit = defineEmits(["itemSelect"])
 const props = defineProps({
   items: {
     type: Array,
-    required: true
+    required: true,
   },
   initActiveItemId: {
     type: [String, Number],

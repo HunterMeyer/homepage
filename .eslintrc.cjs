@@ -19,5 +19,6 @@ module.exports = {
       "arrays": "always-multiline",
       "objects": "always-multiline",
     }],
-  }
+    "vue/multi-word-component-names": 0,
+  },
 }

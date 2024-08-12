@@ -5,5 +5,5 @@ import Skills from "../Resume/Skills.vue"
 export {
   Education,
   Experience,
-  Skills,
+  Skills
 }

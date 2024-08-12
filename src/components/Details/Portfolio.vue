@@ -6,7 +6,11 @@
 
     <section class="projects">
       <ul class="project-list">
-        <PortfolioItem v-for="item in items" :item="item" />
+        <PortfolioItem
+          v-for="(item, index) in items"
+          :key="index"
+          :item="item"
+        />
       </ul>
     </section>
   </article>

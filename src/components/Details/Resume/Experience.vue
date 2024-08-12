@@ -2,14 +2,15 @@
   <section class="timeline">
     <div class="title-wrapper">
       <div class="icon-box">
-        <v-icon name="co-building" scale="1.5" />
+        <v-icon name="co-building" scale="1.2" />
       </div>
       <h3 class="h3">Experience</h3>
     </div>
 
     <ol class="timeline-list">
       <TimelineItem
-        v-for="item in items"
+        v-for="(item, index) in items"
+        :key="index"
         :title="item.company"
         :subtitle="item.role"
         :dates="item.dates"
