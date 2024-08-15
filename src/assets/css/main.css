@@ -314,11 +314,12 @@ main {
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+  gap: 30px;
 }
 
 .navbar-link {
   color: var(--light-gray);
-  font-size: var(--fs-8);
+  font-size: var(--fs-6);
   padding: 20px 7px;
   transition: color var(--transition-1);
 }
@@ -1235,7 +1236,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar { border-radius: 20px 20px 0 0; }
 
-  .navbar-list { gap: 20px; }
 
   .navbar-link { --fs-8: 14px; }
 
