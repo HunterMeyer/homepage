@@ -8,7 +8,7 @@
       <p>
         <b>Hi there!</b> I am a results-driven full-stack software engineer with a decade
         of experience. I am adept at instituting high-quality coding standards and architecture,
-        resulting in improved performance, reliability, scability, and product quality.
+        resulting in improved performance, reliability, scalability, and product quality.
         Proven success in leadership with a track record of delivering impactful changes.
       </p>
 
