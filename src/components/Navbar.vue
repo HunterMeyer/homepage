@@ -6,21 +6,21 @@
         :key="index"
         class="navbar-item"
       >
-        <button
-          class="navbar-link"
+        <a
+          :href="`#${item.id}`"
+          @click.prevent="handleClick(item.id)"
           :class="{ active: item.id === activeItemId }"
-          @click.prevent="setActiveItem(item.id)"
+          class="navbar-link"
         >
           {{item.title}}
-        </button>
+        </a>
       </li>
     </ul>
   </nav>
 </template>
 
 <script setup>
-import { ref } from "vue"
-const emit = defineEmits(["itemSelect"])
+import { ref, onMounted } from "vue"
 
 const props = defineProps({
   items: {
@@ -28,18 +28,35 @@ const props = defineProps({
     required: true,
   },
   initActiveItemId: {
-    type: [String, Number],
+    type: [String, Number, null],
     required: false,
-    default(rawProps) {
-      return rawProps.items[0].id
-    },
+    default: null,
   },
 })
 
-const activeItemId = ref(props.initActiveItemId)
+const activeItemId = ref()
+const emit = defineEmits(["itemSelect"])
+
+onMounted(() => {
+  setInitialActiveItem()
+})
+
+const setInitialActiveItem = () => {
+  const itemIdFromUrlHash = window.location.hash.substring(1) // remove #-sign
+  const itemIdFromProps = props.initActiveItemId
+  const firstItemId = props.items[0].id
+
+  setActiveItem(itemIdFromUrlHash || itemIdFromProps || firstItemId)
+}
 
 const setActiveItem = (itemId) => {
   activeItemId.value = itemId
   emit("itemSelect", itemId)
+}
+
+const handleClick = (itemId) => {
+  // Only set the hash when the user clicks a link
+  window.history.replaceState(undefined, undefined, `#${itemId}`)
+  setActiveItem(itemId)
 }
 </script>

@@ -12,7 +12,7 @@ import { ref } from "vue"
 import Navbar from "./Navbar.vue"
 import { AboutMe, Resume, Portfolio } from "./Details/index.js"
 
-const activeItemId = ref("about")
+const activeItemId = ref()
 
 const navItems = [
   { id: "about", title: "About" },
