@@ -12,6 +12,7 @@
         <img
           :src="item.image_url"
           :alt="item.name"
+          :style="item.css"
           loading="lazy"
         >
       </figure>
