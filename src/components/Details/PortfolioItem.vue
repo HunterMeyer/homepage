@@ -43,6 +43,6 @@ const componentAttrs = hasUrl
       title: props.item.name,
     }
   : {
-    class: "project-item-figure-wrapper",
-  }
+      class: "project-item-figure-wrapper",
+    }
 </script>

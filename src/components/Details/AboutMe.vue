@@ -19,18 +19,32 @@
 
       <p>
         I also invest in building fast-growing technology companies, with my wife over at
-        <a
-          href="https://www.meyervisions.com"
-          target="_blank"
-          title="MeyerVisions"
-          class="about-link"
-        >
-          <b>Meyer Visions</b>
-        </a>.
+        <a v-bind="meyerVisionsLinkAttrs"><b>Meyer Visions</b></a>.
       </p>
 
       <br>
       <p>Thanks for stopping by 👋</p>
+
+      <div class="separator" style="opacity: 1;"></div>
+
+      <div class="template-attribution">
+        Special thanks to <a v-bind="templateLinkAttrs">codewithsadee</a> for this awesome template.
+      </div>
     </section>
   </article>
 </template>
+
+<script setup>
+const meyerVisionsLinkAttrs = {
+  href: "https://www.meyervisions.com",
+  target: "_blank",
+  title: "Meyer Visions",
+  class: "about-link",
+}
+const templateLinkAttrs = {
+  href: "https://github.com/codewithsadee/vcard-personal-portfolio",
+  target: "_blank",
+  title: "Template source credit",
+  class: "about-link",
+}
+</script>

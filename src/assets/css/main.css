@@ -348,12 +348,26 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+.about-text .template-attribution {
+  font-size: var(--fs-8);
+  color: var(--light-gray-70);
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.about-text .template-attribution .about-link {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+}
+
 .about-link {
   display: inline-block;
   color: var(--light-gray);
   font-size: var(--fs-6);
   text-decoration: underline;
 }
+.template-attribution .about-link:hover,
+.template-attribution .about-link:focus,
 .about-link:hover,
 .about-link:focus {
   color: var(--orange-yellow-crayola);
@@ -1249,8 +1263,6 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .about .article-title { margin-bottom: 20px; }
-
-  .about-text { margin-bottom: 40px; }
 
   /* service */
 
