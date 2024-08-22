@@ -22,7 +22,6 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
 import { addIcons } from "oh-vue-icons"
 import { CoExternalLink } from "oh-vue-icons/icons"
 
@@ -35,24 +34,15 @@ const props = defineProps({
   },
 })
 
-const hasUrl = computed(() => {
-  return !!(props.item.url && props.item.url.length > 0)
-})
-
-const componentType = computed(() => {
-  return hasUrl.value ? "a" : "div"
-})
-
-const componentAttrs = computed(() => {
-  if (hasUrl.value) {
-    return {
+const hasUrl = !!(props.item.url && props.item.url.length > 0)
+const componentType = hasUrl ? "a" : "div"
+const componentAttrs = hasUrl
+  ? {
       href: props.item.url,
       target: "_blank",
+      title: props.item.name,
     }
-  } else {
-    return {
-      class: "project-item-figure-wrapper",
-    }
+  : {
+    class: "project-item-figure-wrapper",
   }
-})
 </script>
