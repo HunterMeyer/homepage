@@ -2,7 +2,7 @@
   <aside class="sidebar active">
     <div class="sidebar-info">
       <figure class="avatar-box">
-        <img src="../assets/images/profile-pic.jpeg" alt="Hunter Meyer" width="80">
+        <img src="/images/profile-pic.webp" alt="Hunter Meyer" width="80">
       </figure>
       <div class="info-content">
         <h1 class="name" title="Hunter Meyer">Hunter Meyer</h1>

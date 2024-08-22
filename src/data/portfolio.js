@@ -5,7 +5,7 @@ export default [
     description: `Meyer Visions is a venture capital firm that invests early in
       founders building fast-growing technology companies.`,
     url: "https://www.meyervisions.com",
-    image_url: "/images/portfolio/meyer-visions.png",
+    image_url: "/images/portfolio/meyer-visions.webp",
     visible: true,
   },
   {
@@ -14,7 +14,7 @@ export default [
     description: `Find your first dev job! Featuring jobs and paid internships for
       bootcamp grads, CS students & self taught programmers.`,
     url: "https://www.jrdevjobs.com",
-    image_url: "/images/portfolio/jrdevjobs.png",
+    image_url: "/images/portfolio/jrdevjobs.webp",
     visible: true,
     css: {
       'object-position': 'center top',
@@ -26,7 +26,7 @@ export default [
     description: `MonthlyStash is a subscription service that discreetly delivers
       premium CBD and Delta-9 experiences and products to your doorstep every month.`,
     url: "https://www.monthlystash.com",
-    image_url: "/images/portfolio/monthlystash.png",
+    image_url: "/images/portfolio/monthlystash.webp",
     visible: true,
   },
   {
@@ -35,7 +35,7 @@ export default [
     description: `Backspace allows creators and influencers to connect, grow, and
       monitize their online communities.`,
     url: "https://www.backspacethat.com/",
-    image_url: "/images/portfolio/backspace.jpeg",
+    image_url: "/images/portfolio/backspace.webp",
     visible: true,
     css: {
       'object-position': 'center top',
@@ -47,7 +47,7 @@ export default [
     description: `Get your Game On, you Rascal! Edge Guard Games is a Super Smas Bros.
       Melee Tournament`,
     url: null,
-    image_url: "/images/portfolio/edge-guard.png",
+    image_url: "/images/portfolio/edge-guard.webp",
     visible: true,
     css: {
       'object-position': 'center top',
@@ -59,7 +59,7 @@ export default [
     description: `A Complete, Creative Solution for your Landscape. Proudly Serving
       North Fulton, Cherokee and Forsyth counties.`,
     url: "http://www.zenscapesinc.com/",
-    image_url: "/images/portfolio/zenscapes.png",
+    image_url: "/images/portfolio/zenscapes.webp",
     visible: true,
     css: {
       'object-position': 'center top',
@@ -71,11 +71,8 @@ export default [
     description: `Easily create and join video-conference rooms. Includes real-time
       chat, and anonymity`,
     url: "https://github.com/HunterMeyer/hangout-ninja",
-    image_url: "/images/portfolio/hangout-ninja.png",
+    image_url: "/images/portfolio/hangout-ninja.webp",
     visible: true,
-    css: {
-      'object-position': 'center top',
-    },
   },
   {
     name: "Circle",
@@ -83,7 +80,7 @@ export default [
     description: `Android and iPhone app to find something to do neaby, invite new
       friends over, discover your neighborhood`,
     url: "https://github.com/HunterMeyer/Circle",
-    image_url: "/images/portfolio/circle.png",
+    image_url: "/images/portfolio/circle.webp",
     visible: true,
   },
   {
@@ -92,7 +89,7 @@ export default [
     description: `Brevard Achievement Center (BAC) provides persons with disabilities
       innovative services and opportunities to achieve personal success.`,
     url: null,
-    image_url: "/images/portfolio/bac.png",
+    image_url: "/images/portfolio/bac.webp",
     visible: true,
     css: {
       'object-position': 'center top',
@@ -103,7 +100,7 @@ export default [
     caption: "Tinder for Beer",
     description: "Tinder for Beer",
     url: "https://github.com/HunterMeyer/belch",
-    image_url: "/images/portfolio/belch.png",
+    image_url: "/images/portfolio/belch.webp",
     visible: true,
   },
   {
@@ -111,7 +108,7 @@ export default [
     caption: "Create & Share Audio Snippets",
     description: "An iOS App that lets you record your voice and apply funky filters to it",
     url: "https://github.com/hunterMeyer/snipit",
-    image_url: "/images/portfolio/snipit.png",
+    image_url: "/images/portfolio/snipit.webp",
     visible: true,
   },
 ]
