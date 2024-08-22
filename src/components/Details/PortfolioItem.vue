@@ -1,12 +1,11 @@
 <template>
   <li class="project-item active">
-    <a
-      :href="item.url"
-      :target="hasUrl && '_blank'"
-      @click="handleClick"
+    <component
+      :is="componentType"
+      v-bind="componentAttrs"
     >
       <figure class="project-img">
-        <div v-if="item.url" class="project-item-icon-box">
+        <div v-if="hasUrl" class="project-item-icon-box">
           <v-icon name="co-external-link" />
         </div>
         <img
@@ -18,7 +17,7 @@
       </figure>
       <h3 class="project-title">{{ item.name }}</h3>
       <p class="project-category">{{ item.caption }}</p>
-    </a>
+    </component>
   </li>
 </template>
 
@@ -40,11 +39,20 @@ const hasUrl = computed(() => {
   return !!(props.item.url && props.item.url.length > 0)
 })
 
-const handleClick = (event) => {
-  if (!hasUrl.value) {
-    event.preventDefault()
-    event.stopPropagation()
-    return false
+const componentType = computed(() => {
+  return hasUrl.value ? "a" : "div"
+})
+
+const componentAttrs = computed(() => {
+  if (hasUrl.value) {
+    return {
+      href: props.item.url,
+      target: "_blank",
+    }
+  } else {
+    return {
+      class: "project-item-figure-wrapper",
+    }
   }
-}
+})
 </script>

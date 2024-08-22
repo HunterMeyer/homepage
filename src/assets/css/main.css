@@ -814,7 +814,10 @@ main {
   100% { transform: scale(1); }
 }
 
-.project-item > a { width: 100%; }
+.project-item > a,
+.project-item > .project-item-figure-wrapper {
+  width: 100%;
+}
 
 .project-img {
   position: relative;
