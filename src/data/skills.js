@@ -1,4 +1,4 @@
-export default [
+export const skillsData = [
   {
     title: "Ruby on Rails",
     level: 90,

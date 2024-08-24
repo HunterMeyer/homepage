@@ -21,12 +21,12 @@
 </template>
 
 <script setup>
-import education from "../../../data/education.js"
 import { addIcons } from "oh-vue-icons"
 import { CoSchool } from "oh-vue-icons/icons"
+import { educationData } from "@/data/education.js"
 import TimelineItem from "./TimelineItem.vue"
 
 addIcons(CoSchool)
 
-const items = education.filter(item => item.visible)
+const items = educationData.filter(item => item.visible)
 </script>

@@ -17,8 +17,8 @@
 </template>
 
 <script setup>
-import portfolio from "../../data/portfolio.js"
+import { portfolioData } from "@/data/portfolio.js"
 import PortfolioItem from "./PortfolioItem.vue"
 
-const items = portfolio.filter(item => item.visible)
+const items = portfolioData.filter(item => item.visible)
 </script>

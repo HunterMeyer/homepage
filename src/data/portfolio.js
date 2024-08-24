@@ -1,4 +1,4 @@
-export default [
+export const portfolioData = [
   {
     name: "Meyer Visions",
     caption: "Funding the Future",

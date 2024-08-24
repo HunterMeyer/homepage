@@ -12,8 +12,6 @@
 </template>
 
 <script setup>
-import { computed } from "vue"
-
 const props = defineProps({
   title: {
     type: String,
@@ -25,7 +23,5 @@ const props = defineProps({
   },
 })
 
-const levelPercent = computed(() => {
-  return `${props.level}%`
-})
+const levelPercent = `${props.level}%`
 </script>

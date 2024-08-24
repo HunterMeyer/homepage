@@ -12,46 +12,11 @@
 
     <div class="sidebar-info_more">
       <div class="separator"></div>
-      <ul class="social-list">
-        <li class="social-item"
-          v-for="(link, index) in socialLinks"
-          :key="index"
-        >
-          <a
-            :href="link.url"
-            :title="link.title"
-            target="_blank"
-            class="social-link"
-          >
-            <v-icon :name="link.icon" />
-          </a>
-        </li>
-      </ul>
+      <SocialLinks />
     </div>
   </aside>
 </template>
 
 <script setup>
-import { addIcons } from "oh-vue-icons"
-import { CoLinkedinIn, CoGithub, CoStackoverflow } from "oh-vue-icons/icons"
-
-addIcons(CoLinkedinIn, CoGithub, CoStackoverflow)
-
-const socialLinks = [
-  {
-    title: "LinkedIn",
-    url: "https://www.linkedin.com/in/hrmeyer",
-    icon: "co-linkedin-in",
-  },
-  {
-    title: "Github",
-    url: "https://github.com/huntermeyer",
-    icon: "co-github",
-  },
-  {
-    title: "Stack Overflow",
-    url: "https://stackoverflow.com/users/1953904/hunter",
-    icon: "co-stackoverflow",
-  },
-]
+import SocialLinks from "./SocialLinks.vue"
 </script>

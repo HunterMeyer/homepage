@@ -21,12 +21,12 @@
 </template>
 
 <script setup>
-import experience from "../../../data/experience.js"
 import { addIcons } from "oh-vue-icons"
 import { CoBuilding } from "oh-vue-icons/icons"
+import { experienceData } from "@/data/experience.js"
 import TimelineItem from "./TimelineItem.vue"
 
 addIcons(CoBuilding)
 
-const items = experience.filter(item => item.visible)
+const items = experienceData.filter(item => item.visible)
 </script>

@@ -19,12 +19,12 @@
 </template>
 
 <script setup>
-import skills from "../../../data/skills.js"
 import { addIcons } from "oh-vue-icons"
 import { CoCode } from "oh-vue-icons/icons"
+import { skillsData } from "@/data/skills.js"
 import SkillItem from "./SkillItem.vue"
 
 addIcons(CoCode)
 
-const items = skills.filter(item => item.visible)
+const items = skillsData.filter(item => item.visible)
 </script>

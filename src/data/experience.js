@@ -1,4 +1,4 @@
-export default [
+export const experienceData = [
   {
     company: "Calendly",
     role: "Senior Full Stack Engineer",

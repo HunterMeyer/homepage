@@ -1,4 +1,4 @@
-export default [
+export const educationData = [
   {
     school: "University of Central Florida",
     degree: "B.A. Communication & Marketing",
