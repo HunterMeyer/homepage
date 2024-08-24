@@ -34,8 +34,9 @@ const props = defineProps({
   },
 })
 
-const activeItemId = ref()
 const emit = defineEmits(["itemSelect"])
+
+const activeItemId = ref()
 
 onMounted(() => {
   setInitialActiveItem()

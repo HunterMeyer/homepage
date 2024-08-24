@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <Navbar :items="navItems" @item-select="setActive" />
+    <TheNavbar :items="navItems" @item-select="setActive" />
     <AboutMe :class="{ active: activeItemId === 'about' }" />
     <Resume :class="{ active: activeItemId === 'resume' }" />
     <Portfolio :class="{ active: activeItemId === 'portfolio' }" />
@@ -9,7 +9,7 @@
 
 <script setup>
 import { ref } from "vue"
-import Navbar from "./Navbar.vue"
+import TheNavbar from "./TheNavbar.vue"
 import { AboutMe, Resume, Portfolio } from "./Details/index.js"
 
 const activeItemId = ref()

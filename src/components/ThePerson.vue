@@ -18,5 +18,5 @@
 </template>
 
 <script setup>
-import SocialLinks from "./SocialLinks.vue"
+import SocialLinks from "./Person/SocialLinks.vue"
 </script>
