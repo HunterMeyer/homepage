@@ -717,6 +717,10 @@ main {
 
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
+.skills-list .skills-item .title-wrapper {
+  gap: 5px;
+  margin-bottom: 8px;
+}
 
 .skill .title-wrapper {
   display: flex;
