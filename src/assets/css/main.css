@@ -320,7 +320,7 @@ main {
 .navbar-link {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  padding: 20px 7px;
+  padding: 14px 6px;
   transition: color var(--transition-1);
 }
 
@@ -1594,7 +1594,10 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 0 20px;
   }
 
-  .navbar-link { font-weight: var(--fw-500); }
+  .navbar-link {
+    font-weight: var(--fw-500);
+    padding: 20px 7px;
+  }
 
 
 
