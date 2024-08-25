@@ -1,7 +1,7 @@
-import "./assets/css/main.css"
+import "@/assets/css/main.css"
 import { createApp } from "vue"
-import App from "./App.vue"
 import { OhVueIcon } from "oh-vue-icons"
+import App from "./App.vue"
 
 const app = createApp(App)
 

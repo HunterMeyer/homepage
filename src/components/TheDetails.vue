@@ -8,11 +8,15 @@
 </template>
 
 <script setup>
-import { ref } from "vue"
+import { ref, computed } from "vue"
 import TheNavbar from "./TheNavbar.vue"
 import { AboutMe, Resume, Portfolio } from "./Details/index.js"
 
-const activeItemId = ref()
+const activeItem = ref()
+
+const activeItemId = computed(() => {
+  return activeItem.value?.id
+})
 
 const navItems = [
   { id: "about", title: "About" },
@@ -20,7 +24,7 @@ const navItems = [
   { id: "portfolio", title: "Portfolio" },
 ]
 
-const setActive = (itemId) => {
-  activeItemId.value = itemId
+const setActive = (item) => {
+  activeItem.value = item
 }
 </script>
