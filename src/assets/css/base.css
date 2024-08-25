@@ -43,6 +43,7 @@
   --eerie-black-1: hsl(240, 2%, 13%);
   --eerie-black-2: hsl(240, 2%, 12%);
   --smoky-black: hsl(0, 0%, 7%);
+  --dark-gray: hsla(240, 1%, 17%, 0.75);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsl(45, 100%, 72%);
@@ -88,4 +89,38 @@
    */
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
+}
+
+[data-theme="light"] {
+  /**
+   * colors
+   */
+
+  /* gradient */
+  --bg-gradient-jet: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 100%) 0%, 
+    hsla(240, 2%, 11%, 0) 100%
+  ), hsl(0deg 0% 100%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 100%) 50%, 
+    hsl(0, 0%, 94%) 0%
+  );
+
+  /* solid */
+  --jet: hsl(0, 0%, 94%); /* changed */
+  --onyx: hsl(240, 1%, 17%);
+  --eerie-black-1: hsl(0, 0%, 100%); /* changed */
+  --eerie-black-2: hsl(0, 0%, 100%); /* changed */
+  --smoky-black: hsl(0, 0%, 100%); /* changed */
+  --dark-gray: hsl(0, 0%, 15%); /* changed */
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 15%); /* changed */
+  --orange-yellow-crayola: hsl(45, 84%, 55%); /* changed */
+  --vegas-gold: hsl(45, 85%, 44%); /* change */
+  --light-gray: hsl(0, 0%, 15%); /* changed */
+  --light-gray-2: hsl(0, 0%, 60%); /* changed */
+  --light-gray-70: hsla(0, 0%, 45%, 0.7); /* changed */
+  --bittersweet-shimmer: hsl(0, 43%, 51%);
 }

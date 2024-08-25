@@ -8,6 +8,7 @@
         <h1 class="name" title="Hunter Meyer">Hunter Meyer</h1>
         <p class="title">Software Engineer</p>
       </div>
+      <TheThemer />
     </div>
 
     <div class="sidebar-info_more">
@@ -18,5 +19,6 @@
 </template>
 
 <script setup>
+import TheThemer from "./TheThemer.vue"
 import SocialLinks from "./Person/SocialLinks.vue"
 </script>

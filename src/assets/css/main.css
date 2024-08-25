@@ -65,7 +65,6 @@ article.active {
 .h4,
 .h5 {
   color: var(--white-2);
-  /* text-transform: capitalize; */
 }
 
 .h2 { font-size: var(--fs-1); }
@@ -108,6 +107,16 @@ article.active {
 .has-scrollbar::-webkit-scrollbar-thumb {
   background: var(--orange-yellow-crayola);
   border-radius: 5px;
+}
+
+[data-theme="light"] {
+  .has-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .has-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
 }
 
 .has-scrollbar::-webkit-scrollbar-button { width: 20px; }
@@ -158,7 +167,6 @@ main {
   margin-bottom: 15px;
   max-height: 112px;
   overflow: hidden;
-  transition: var(--transition-2);
 }
 
 .sidebar.active { max-height: 405px; }
@@ -195,37 +203,29 @@ main {
   border-radius: 8px;
 }
 
-.info_more-btn {
+.theme-toggle {
   position: absolute;
   top: -15px;
   right: -15px;
   border-radius: 0 15px;
   font-size: 13px;
   color: var(--orange-yellow-crayola);
-  background: var(--border-gradient-onyx);
+  border-top-width: 0;
+  border-right-width: 0;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: var(--jet);
   padding: 10px;
-  box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
+  background: var(--dark-gray);
   z-index: 1;
 }
 
-.info_more-btn::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: var(--bg-gradient-jet);
-  transition: var(--transition-1);
-  z-index: -1;
+[data-theme="light"] {
+  .theme-toggle {
+    background: var(--white-1);
+  }
 }
-
-.info_more-btn:hover,
-.info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
-
-.info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
-
-.info_more-btn span { display: none; }
 
 .sidebar-info_more {
   opacity: 0;
@@ -300,12 +300,18 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--dark-gray);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
+}
+
+[data-theme="light"] {
+  .navbar {
+    border-color: var(--dark-gray);
+  }
 }
 
 .navbar-list {
@@ -324,11 +330,29 @@ main {
   transition: color var(--transition-1);
 }
 
+[data-theme="light"] {
+  .navbar-link {
+    color: var(--white-1);
+  }
+}
+
 .navbar-link:hover,
 .navbar-link:focus { color: var(--light-gray-70); }
 
+[data-theme="light"] {
+  .navbar-link:hover,
+  .navbar-link:focus {
+    color: var(--light-gray-2);
+  }
+}
+
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+[data-theme="light"] {
+  .navbar-link.active {
+    color: var(--orange-yellow-crayola);
+  }
+}
 
 
 
@@ -353,6 +377,12 @@ main {
   color: var(--light-gray-70);
   font-style: italic;
   opacity: 0.5;
+}
+
+[data-theme="light"] {
+  .about-text .template-attribution {
+    opacity: 1;
+  }
 }
 
 .about-text .template-attribution .about-link {
@@ -700,6 +730,11 @@ main {
   box-shadow: 0 0 0 4px var(--jet);
 }
 
+[data-theme="light"] {
+  .timeline-item::after {
+    box-shadow: 0 0 0 4px var(--white-1);
+  }
+}
 .timeline-text {
   color: var(--light-gray);
   font-weight: var(--fw-300);
@@ -1227,18 +1262,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .info-content .title { padding: 5px 18px; }
 
-  .info_more-btn {
+  .theme-toggle {
     top: -30px;
     right: -30px;
     padding: 10px 15px;
   }
-
-  .info_more-btn span {
-    display: block;
-    font-size: var(--fs-8);
-  }
-
-  .info_more-btn ion-icon { display: none; }
 
   .separator { margin: 32px 0; }
 
@@ -1557,6 +1585,12 @@ textarea.form-input::-webkit-resizer { display: none; }
     box-shadow: var(--shadow-5);
   }
 
+  [data-theme="light"] {
+    .sidebar, article {
+      box-shadow: var(--shadow-3);
+    }
+  }
+
 
 
   /**
@@ -1726,7 +1760,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .info-content .title { margin: auto; }
 
-  .info_more-btn { display: none; }
+  .theme-toggle {
+    top: -61px;
+    right: -31px;
+    padding: 10px 15px;
+  }
 
   .sidebar-info_more {
     opacity: 1;

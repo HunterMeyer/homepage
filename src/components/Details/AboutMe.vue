@@ -28,7 +28,7 @@
       <div class="separator" style="opacity: 1;"></div>
 
       <div class="template-attribution">
-        Special thanks to <a v-bind="templateLinkAttrs">codewithsadee</a> for this awesome template.
+        Theme inspired by <a v-bind="templateLinkAttrs">codewithsadee</a>.
       </div>
     </section>
   </article>
