@@ -118,9 +118,11 @@
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 15%); /* changed */
   --orange-yellow-crayola: hsl(45, 84%, 55%); /* changed */
+  --orange-yellow-crayola-light: hsl(45, 100%, 93%); /* added */
   --vegas-gold: hsl(45, 85%, 44%); /* change */
   --light-gray: hsl(0, 0%, 15%); /* changed */
   --light-gray-2: hsl(0, 0%, 60%); /* changed */
+  --light-gray-3: hsl(0, 0%, 90%); /* added */
   --light-gray-70: hsla(0, 0%, 45%, 0.7); /* changed */
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 }

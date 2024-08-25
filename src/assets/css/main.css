@@ -219,11 +219,16 @@ main {
   padding: 10px;
   background: var(--dark-gray);
   z-index: 1;
+  transition: opacity var(--transition-1);
+}
+
+.theme-toggle:hover {
+  opacity: 0.5;
 }
 
 [data-theme="light"] {
   .theme-toggle {
-    background: var(--white-1);
+    background: var(--orange-yellow-crayola-light);
   }
 }
 
