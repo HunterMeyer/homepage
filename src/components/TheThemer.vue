@@ -1,18 +1,26 @@
 <template>
-<button
-  @click="toggleTheme"
-  class="theme-toggle"
-  title="Toggle theme"
->
-  <v-icon :name="themeIcon" />
-</button>
+  <button
+    @click="toggleTheme"
+    title="Toggle theme"
+    class="
+      flex
+      rounded-md
+      p-0.5
+      bg-my-black-400
+      dark:bg-my-black-800
+      text-white/80
+      dark:text-yellow-500
+    "
+  >
+    <v-icon :name="themeIcon" scale="0.8" label="Toggle theme" />
+  </button>
 </template>
 
 <script setup>
 import { onBeforeMount, ref } from "vue"
 import { addIcons } from "oh-vue-icons"
 import { CoSun, CoMoon } from "oh-vue-icons/icons"
-import { currentTheme, setTheme } from "@/utils/theme.js"
+import { Themes, currentTheme, saveTheme } from "@/utils/theme.js"
 
 addIcons(CoSun, CoMoon)
 
@@ -23,13 +31,13 @@ onBeforeMount(() => {
 })
 
 const setThemeIcon = () => {
-  const icon = currentTheme() === "light" ? "co-moon" : "co-sun"
+  const icon = currentTheme() === Themes.LIGHT ? "co-moon" : "co-sun"
   themeIcon.value = icon
 }
 
 const toggleTheme = () => {
-  const theme = currentTheme() === "light" ? "dark" : "light"
-  setTheme(theme)
+  const theme = currentTheme() === Themes.LIGHT ? Themes.DARK : Themes.LIGHT
+  saveTheme(theme)
   setThemeIcon()
 }
 </script>

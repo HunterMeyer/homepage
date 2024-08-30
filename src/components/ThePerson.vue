@@ -1,24 +1,49 @@
 <template>
-  <aside class="sidebar active">
-    <div class="sidebar-info">
-      <figure class="avatar-box">
-        <img src="/images/profile-pic.webp" alt="Hunter Meyer" width="80">
-      </figure>
-      <div class="info-content">
-        <h1 class="name" title="Hunter Meyer">Hunter Meyer</h1>
-        <p class="title">Software Engineer</p>
+  <section
+    data-component="sidebar"
+    class="
+      w-full
+      lg:w-min
+      lg:sticky
+      lg:top-10
+      lg:self-start
+      p-6
+      md:p-8
+      bg-white
+      dark:bg-my-black-700
+      shadow-lg
+      rounded-3xl
+    "
+  >
+    <div class="flex flex-col gap-6 md:gap-6">
+      <div class="flex lg:flex-col gap-5 md:gap-6 items-center">
+        <figure>
+          <img :src="personData.imageUrl" class="rounded-xl w-24 h-24 md:w-32 md:h-32 lg:w-full lg:h-full lg:rounded-2xl" :alt="personData.name" >
+        </figure>
+        <header class="flex flex-col gap-2 md:gap-4 items-start lg:items-center">
+          <h1 class="text-xl md:text-2xl font-semibold text-black dark:text-white whitespace-nowrap">{{ personData.name }}</h1>
+          <div class="rounded-lg px-3 py-1 text-xs font-light text-center bg-black dark:bg-my-black-500 text-white ">
+            {{ personData.badge }}
+          </div>
+        </header>
       </div>
-      <TheThemer />
+      <div data-component="separator" class="h-px rounded-full bg-gray-200 dark:bg-my-black-500"></div>
+      <div class="flex flex-row gap-4 lg:gap-0 items-center lg:justify-between">
+        <SocialLink
+          v-for="(link, index) in socialLinksData"
+          :key="index"
+          :link="link"
+        />
+        <div class="grow lg:hidden"></div>
+        <TheThemer />
+      </div>
     </div>
-
-    <div class="sidebar-info_more">
-      <div class="separator"></div>
-      <SocialLinks />
-    </div>
-  </aside>
+  </section>
 </template>
 
 <script setup>
+import { socialLinksData } from "@/data/social-links.js"
+import { personData } from "@/data/person.js"
 import TheThemer from "./TheThemer.vue"
-import SocialLinks from "./Person/SocialLinks.vue"
+import SocialLink from "./Person/SocialLink.vue"
 </script>

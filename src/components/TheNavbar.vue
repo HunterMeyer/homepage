@@ -1,26 +1,51 @@
 <template>
-  <nav class="navbar">
-    <ul class="navbar-list">
-      <li
+  <nav class="
+    max-md:fixed
+    md:absolute
+    max-md:bottom-0
+    md:top-0
+    right-0
+    max-md:w-full
+    bg-black/70
+    md:bg-black
+    dark:bg-my-black-500/70
+    md:dark:bg-my-black-500
+    max-md:backdrop-blur-md
+    max-md:rounded-t-3xl
+    md:rounded-tr-3xl
+    md:rounded-bl-3xl
+    px-4
+    md:px-8
+    py-2
+    max-md:z-20
+  "
+  >
+    <div class="flex flex-row gap-6 justify-center md:justify-start">
+      <a
         v-for="(item, index) in items"
+        @click.prevent="handleClick(item)"
         :key="index"
-        class="navbar-item"
+        :href="`#${item.id}`"
+        :class="{ active: item.id === activeItemId }"
+        class="
+          text-sm
+          md:text-md
+          px-4
+          py-2
+          rounded-md
+          transition-colors ease-in
+          [&.active]:text-yellow-500 [&.active]:hover:text-yellow-500
+          text-white hover:text-my-black-100
+        "
       >
-        <a
-          :href="`#${item.id}`"
-          @click.prevent="handleClick(item)"
-          :class="{ active: item.id === activeItemId }"
-          class="navbar-link"
-        >
-          {{item.title}}
-        </a>
-      </li>
-    </ul>
+        {{ item.title }}
+      </a>
+    </div>
   </nav>
 </template>
 
 <script setup>
-import { computed, ref, onMounted, } from "vue"
+import { computed, ref, onMounted } from "vue"
 import { setPageTitle } from "@/utils/page-title"
 
 const props = defineProps({

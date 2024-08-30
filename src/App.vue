@@ -1,15 +1,11 @@
 <template>
-  <main>
-    <ThePerson />
-    <TheDetails />
-  </main>
+  <Layout />
 </template>
 
 <script setup>
 import { onBeforeMount } from "vue"
 import { setInitialTheme } from "@/utils/theme"
-import ThePerson from "@/components/ThePerson.vue"
-import TheDetails from "@/components/TheDetails.vue"
+import Layout from "@/components/Layout.vue"
 
 onBeforeMount(() => {
   setInitialTheme()

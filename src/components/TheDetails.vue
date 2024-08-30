@@ -1,10 +1,10 @@
 <template>
-  <div class="main-content">
+  <section class="relative w-full">
     <TheNavbar :items="navItems" @item-select="setActive" />
-    <AboutMe :class="{ active: activeItemId === 'about' }" />
-    <Resume :class="{ active: activeItemId === 'resume' }" />
-    <Portfolio :class="{ active: activeItemId === 'portfolio' }" />
-  </div>
+    <AboutMe v-if="activeItemId === 'about'" />
+    <Resume v-if="activeItemId === 'resume'" />
+    <Portfolio v-if="activeItemId === 'portfolio'" />
+  </section>
 </template>
 
 <script setup>

@@ -11,16 +11,16 @@ export const socialLinksData = [
   {
     title: "LinkedIn",
     url: "https://www.linkedin.com/in/hrmeyer",
-    icon_name: CoLinkedinIn.name,
+    iconName: CoLinkedinIn.name,
   },
   {
     title: "Github",
     url: "https://github.com/huntermeyer",
-    icon_name: CoGithub.name,
+    iconName: CoGithub.name,
   },
   {
     title: "Stack Overflow",
     url: "https://stackoverflow.com/users/1953904/hunter",
-    icon_name: CoStackoverflow.name,
+    iconName: CoStackoverflow.name,
   },
 ]
