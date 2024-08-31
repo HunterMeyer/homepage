@@ -6,11 +6,11 @@
     class="
       flex
       transition-colors ease-in
+      rounded-sm
       text-my-black-300
       dark:text-my-black-200
       hover:text-black
       dark:hover:text-white
-      rounded-sm
     "
   >
     <v-icon :name="link.iconName" scale="1.1" :label="link.title"/>
