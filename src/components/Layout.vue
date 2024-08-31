@@ -6,13 +6,13 @@
     mx-auto
     md:max-w-2xl
     lg:max-w-5xl
-    p-6
+    p-2
     pb-16
     md:p-10
     selection:bg-yellow-500
     dark:selection:bg-yellow-600
   ">
-    <div class="flex flex-col lg:flex-row gap-6 md:gap-8">
+    <div class="flex flex-col lg:flex-row gap-4 md:gap-8">
       <ThePerson />
       <TheDetails />
     </div>

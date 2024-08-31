@@ -6,7 +6,7 @@
     md:top-0
     right-0
     max-md:w-full
-    bg-black/70
+    bg-black
     md:bg-black
     dark:bg-my-black-500/70
     md:dark:bg-my-black-500

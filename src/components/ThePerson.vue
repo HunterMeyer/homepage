@@ -7,7 +7,7 @@
       lg:sticky
       lg:top-10
       lg:self-start
-      p-6
+      p-4
       md:p-8
       bg-white
       dark:bg-my-black-700
@@ -15,8 +15,8 @@
       rounded-3xl
     "
   >
-    <div class="flex flex-col gap-6 md:gap-6">
-      <div class="flex lg:flex-col gap-5 md:gap-6 items-center">
+    <div class="flex flex-col gap-4 md:gap-6">
+      <div class="flex lg:flex-col gap-4 md:gap-6 items-center">
         <figure>
           <img :src="personData.imageUrl" class="rounded-xl w-24 h-24 md:w-32 md:h-32 lg:w-full lg:h-full lg:rounded-2xl" :alt="personData.name" >
         </figure>
