@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full">
+  <section class="relative w-full rounded-3xl p-4 md:p-8 shadow-lg bg-white dark:bg-my-black-700 "">
     <TheNavbar :items="navItems" @item-select="setActive" />
     <AboutMe v-if="activeItemId === 'about'" />
     <Resume v-if="activeItemId === 'resume'" />
