@@ -7,3 +7,87 @@
     @apply focus:outline-none focus-visible:ring focus-visible:ring-yellow-500;
   }
 }
+
+.neu-shadow-flat-xs {
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #bebebe,
+              -5px -5px 10px #ffffff;
+}
+.neu-shadow-flat-sm {
+  background: #e0e0e0;
+  box-shadow: 10px 10px 20px #bebebe,
+              -10px -10px 20px #ffffff;
+}
+.neu-shadow-flat-md {
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe,
+              -15px -15px 30px #ffffff;
+}
+.neu-shadow-flat-lg {
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe,
+              -20px -20px 60px #ffffff
+}
+
+.neu-shadow-concave-xs {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 5px 5px 10px #bebebe,
+              -5px -5px 10px #ffffff;
+}
+.neu-shadow-concave-sm {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 10px 10px 20px #bebebe,
+              -10px -10px 20px #ffffff;
+}
+.neu-shadow-concave-md {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 15px 15px 30px #bebebe,
+              -15px -15px 30px #ffffff;
+}
+.neu-shadow-concave-lg {
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 20px 20px 60px #bebebe,
+              -20px -20px 60px #ffffff
+}
+
+.neu-shadow-convex-xs {
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 5px 5px 10px #bebebe,
+              -5px -5px 10px #ffffff;
+}
+.neu-shadow-convex-sm {
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 10px 10px 20px #bebebe,
+              -10px -10px 20px #ffffff;
+}
+.neu-shadow-convex-md {
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 15px 15px 30px #bebebe,
+              -15px -15px 30px #ffffff;
+}
+.neu-shadow-convex-lg {
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 20px 20px 60px #bebebe,
+              -20px -20px 60px #ffffff
+}
+
+.neu-shadow-inset-xs {
+  background: #e0e0e0;
+  box-shadow: inset 5px 5px 10px #bebebe,
+              inset -5px -5px 10px #ffffff;
+}
+.neu-shadow-inset-sm {
+  background: #e0e0e0;
+  box-shadow: inset 10px 10px 20px #bebebe,
+              inset -10px -10px 20px #ffffff;
+}
+.neu-shadow-inset-md {
+  background: #e0e0e0;
+  box-shadow: inset 15px 15px 30px #bebebe,
+              inset -15px -15px 30px #ffffff;
+}
+.neu-shadow-inset-lg {
+  background: #e0e0e0;
+  box-shadow: inset 20px 20px 40px #bebebe,
+              inset -20px -20px 40px #ffffff;
+}
