@@ -69,12 +69,12 @@
         >
       </figure>
       <header class="ml-1">
-        <h4
+        <h3
           :class="{ 'group-hover:text-yellow-500': hasUrl }"
           class="text-lg font-medium transition-colors ease-in-out"
         >
           {{ item.name }}
-        </h4>
+        </h3>
         <p class="text-md font-light text-my-black-300 dark:text-my-black-200">{{ item.caption }}</p>
       </header>
     </component>
