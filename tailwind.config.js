@@ -4,6 +4,9 @@ export default {
   content: ["./src/**/*.vue"],
   darkMode: "selector",
   theme: {
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
+    },
     extend: {
       colors: {
         "my-black": {
@@ -27,9 +30,6 @@ export default {
           "0%": { transform: "scale(0.4)" },
           "100%": { transform: "scale(1)" },
         },
-      },
-      fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
