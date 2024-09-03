@@ -1,56 +1,17 @@
 <template>
   <section class="animate-scale-up">
-    <component :is="componentType" v-bind="componentAttrs" class="flex flex-col gap-2 group rounded-2xl">
+    <component
+      :is="componentType"
+      v-bind="componentAttrs"
+      class="group flex flex-col gap-2 rounded-2xl"
+    >
       <figure
         :class="{ 'before:group-hover:group-hover:bg-black/50': hasUrl }"
-        class="
-          relative
-          rounded-2xl
-          w-full
-          h-56
-          md:h-44
-          overflow-hidden
-          shadow-xl
-          before:content-['']
-          before:absolute
-          before:top-0
-          before:left-0
-          before:w-full
-          before:h-full
-          before:z-10
-          before:bg-transparent
-          before:transition-all
-          before:duration-200
-          before:ease-in-out
-        "
+        class="relative h-56 w-full overflow-hidden rounded-2xl shadow-xl before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-transparent before:transition-all before:duration-200 before:ease-in-out before:content-[''] md:h-44"
       >
         <div
           v-if="hasUrl"
-          class="
-            flex
-            justify-center
-            items-center
-            bg-white
-            dark:bg-my-black-500
-            text-yellow-500
-            shadow-lg
-            absolute
-            top-1/2
-            left-1/2
-            -translate-x-1/2
-            -translate-y-1/2
-            scale-75
-            group-hover:scale-100
-            h-14
-            w-14
-            z-10
-            rounded-2xl
-            opacity-0
-            group-hover:opacity-100
-            transition-all
-            duration-200
-            ease-in-out
-          "
+          class="absolute left-1/2 top-1/2 z-10 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 scale-75 items-center justify-center rounded-2xl bg-white text-yellow-500 opacity-0 shadow-lg transition-all duration-200 ease-in-out group-hover:scale-100 group-hover:opacity-100 dark:bg-my-black-500"
         >
           <v-icon name="co-external-link" />
         </div>
@@ -59,14 +20,9 @@
           :alt="item.name"
           :style="item.css"
           :class="{ 'group-hover:scale-110': hasUrl }"
-          class="
-            w-full
-            h-full
-            transition-all duration-200 ease-in-out
-            object-cover
-          "
+          class="h-full w-full object-cover transition-all duration-200 ease-in-out"
           loading="lazy"
-        >
+        />
       </figure>
       <header class="ml-1">
         <h3
@@ -75,7 +31,9 @@
         >
           {{ item.name }}
         </h3>
-        <p class="text-md font-light text-my-black-300 dark:text-my-black-200">{{ item.caption }}</p>
+        <p class="text-md font-light text-my-black-300 dark:text-my-black-200">
+          {{ item.caption }}
+        </p>
       </header>
     </component>
   </section>
@@ -96,10 +54,9 @@ const props = defineProps({
 
 const hasUrl = !!(props.item.url && props.item.url.length > 0)
 const componentType = hasUrl ? "a" : "div"
-const componentAttrs = hasUrl &&
-  {
-    href: props.item.url,
-    target: "_blank",
-    title: props.item.name,
-  }
+const componentAttrs = hasUrl && {
+  href: props.item.url,
+  target: "_blank",
+  title: props.item.name,
+}
 </script>

@@ -1,9 +1,5 @@
 import { addIcons } from "oh-vue-icons"
-import {
-  CoLinkedinIn,
-  CoGithub,
-  CoStackoverflow
-} from "oh-vue-icons/icons"
+import { CoLinkedinIn, CoGithub, CoStackoverflow } from "oh-vue-icons/icons"
 
 addIcons(CoLinkedinIn, CoGithub, CoStackoverflow)
 

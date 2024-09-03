@@ -15,10 +15,6 @@ module.exports = {
     "vue/block-order": ["error", {
       "order": ["template", "script", "style"],
     }],
-    "comma-dangle": ["error", {
-      "arrays": "always-multiline",
-      "objects": "always-multiline",
-    }],
     "vue/multi-word-component-names": 0,
   },
 }

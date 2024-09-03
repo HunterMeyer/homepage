@@ -1,8 +1,13 @@
 <template>
   <article class="flex flex-col gap-4">
-    <header class="flex flex-row gap-5 items-center z-10">
-      <div class="flex justify-center items-center w-12 h-12 rounded-xl shadow-lg text-yellow-500 bg-white dark:bg-my-black-500">
-        <v-icon name="co-school" scale="1.5" />
+    <header class="z-10 flex flex-row items-center gap-5">
+      <div
+        class="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-yellow-500 shadow-lg dark:bg-my-black-500"
+      >
+        <v-icon
+          name="co-school"
+          scale="1.5"
+        />
       </div>
       <h3 class="text-2xl font-bold">Education</h3>
     </header>
@@ -30,5 +35,5 @@ import TimelineItem from "./TimelineItem.vue"
 
 addIcons(CoSchool)
 
-const items = educationData.filter(item => item.visible)
+const items = educationData.filter((item) => item.visible)
 </script>

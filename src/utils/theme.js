@@ -8,10 +8,10 @@ const applyTheme = (theme) => {
 
   if (theme === Themes.DARK) {
     classList.add(Themes.DARK)
-    themeTag.setAttribute("content", "#121212");
+    themeTag.setAttribute("content", "#121212")
   } else {
     classList.remove(Themes.DARK)
-    themeTag.setAttribute("content", "#E7E5E4");
+    themeTag.setAttribute("content", "#E7E5E4")
   }
 }
 
@@ -22,7 +22,7 @@ export const Themes = {
 }
 
 export const themePreference = () => {
-  return (localStorage.theme || Themes.OS)
+  return localStorage.theme || Themes.OS
 }
 
 export const currentTheme = () => {

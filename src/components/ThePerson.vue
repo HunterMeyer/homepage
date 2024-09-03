@@ -1,34 +1,35 @@
 <template>
   <section
     data-component="sidebar"
-    class="
-      w-full
-      lg:w-min
-      lg:sticky
-      lg:top-10
-      lg:self-start
-      p-4
-      md:p-8
-      bg-white
-      dark:bg-my-black-700
-      shadow-lg
-      rounded-3xl
-    "
+    class="w-full rounded-3xl bg-white p-4 shadow-lg md:p-8 lg:sticky lg:top-10 lg:w-min lg:self-start dark:bg-my-black-700"
   >
     <div class="flex flex-col gap-4 md:gap-6">
-      <div class="flex lg:flex-col gap-4 md:gap-6 items-center">
+      <div class="flex items-center gap-4 md:gap-6 lg:flex-col">
         <figure>
-          <img :src="personData.imageUrl" class="rounded-xl w-24 h-24 md:w-32 md:h-32 lg:w-full lg:h-full lg:rounded-2xl" :alt="personData.name" >
+          <img
+            :src="personData.imageUrl"
+            class="h-24 w-24 rounded-xl md:h-32 md:w-32 lg:h-full lg:w-full lg:rounded-2xl"
+            :alt="personData.name"
+          />
         </figure>
-        <header class="flex flex-col gap-2 md:gap-4 items-start lg:items-center">
-          <h1 class="text-xl md:text-2xl font-semibold text-black dark:text-white whitespace-nowrap">{{ personData.name }}</h1>
-          <div class="rounded-lg px-3 py-1 text-xs font-light text-center bg-black dark:bg-my-black-500 text-white ">
+        <header class="flex flex-col items-start gap-2 md:gap-4 lg:items-center">
+          <h1
+            class="whitespace-nowrap text-xl font-semibold text-black md:text-2xl dark:text-white"
+          >
+            {{ personData.name }}
+          </h1>
+          <div
+            class="rounded-lg bg-black px-3 py-1 text-center text-xs font-light text-white dark:bg-my-black-500"
+          >
             {{ personData.badge }}
           </div>
         </header>
       </div>
-      <div data-component="separator" class="h-px rounded-full bg-gray-200 dark:bg-my-black-500"></div>
-      <div class="flex flex-row gap-4 lg:gap-0 items-center lg:justify-between">
+      <div
+        data-component="separator"
+        class="h-px rounded-full bg-gray-200 dark:bg-my-black-500"
+      ></div>
+      <div class="flex flex-row items-center gap-4 lg:justify-between lg:gap-0">
         <SocialLink
           v-for="(link, index) in socialLinksData"
           :key="index"

@@ -1,6 +1,9 @@
 <template>
   <section class="relative w-full">
-    <TheNavbar :items="navItems" @item-select="setActive" />
+    <TheNavbar
+      :items="navItems"
+      @item-select="setActive"
+    />
     <AboutMe v-if="activeItemId === 'about'" />
     <Resume v-if="activeItemId === 'resume'" />
     <Portfolio v-if="activeItemId === 'portfolio'" />

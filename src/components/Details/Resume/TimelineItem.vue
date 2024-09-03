@@ -1,35 +1,14 @@
 <template>
-  <section class="
-    pb-4
-    relative
-    [&:not(:last-child)]:before:content-['']
-    [&:not(:last-child)]:before:absolute
-    [&:not(:last-child)]:before:-left-11
-    [&:not(:last-child)]:before:-top-4
-    [&:not(:last-child)]:before:h-[calc(100%+2rem)]
-    [&:not(:last-child)]:before:w-px
-    [&:not(:last-child)]:before:bg-gray-200
-    dark:[&:not(:last-child)]:before:bg-my-black-500
-    after:content-['']
-    after:absolute
-    after:-left-12
-    after:top-2.5
-    after:h-2
-    after:w-2
-    after:bg-yellow-500
-    after:rounded-full
-    after:outline
-    after:outline-4
-    after:outline-white
-    dark:after:outline-my-black-700
-  ">
+  <section
+    class="relative pb-4 after:absolute after:-left-12 after:top-2.5 after:h-2 after:w-2 after:rounded-full after:bg-yellow-500 after:outline after:outline-4 after:outline-white after:content-[''] dark:after:outline-my-black-700 [&:not(:last-child)]:before:absolute [&:not(:last-child)]:before:-left-11 [&:not(:last-child)]:before:-top-4 [&:not(:last-child)]:before:h-[calc(100%+2rem)] [&:not(:last-child)]:before:w-px [&:not(:last-child)]:before:bg-gray-200 [&:not(:last-child)]:before:content-[''] dark:[&:not(:last-child)]:before:bg-my-black-500"
+  >
     <header>
       <h4 class="text-lg font-medium">
         <a
           :href="url"
           :title="title"
           target="_blank"
-          class="transition-colors ease-in text-black dark:text-white hover:text-yellow-500 rounded-md"
+          class="rounded-md text-black transition-colors ease-in hover:text-yellow-500 dark:text-white"
         >
           {{ title }}
         </a>

@@ -1,13 +1,21 @@
 <template>
   <section class="flex flex-col gap-2">
-    <header class="flex flex-row gap-1.5 items-baseline">
+    <header class="flex flex-row items-baseline gap-1.5">
       <h4 class="text-md font-medium">{{ title }}</h4>
-      <data :value="level" class="text-md font-light text-my-black-300 dark:text-my-black-200">{{ levelPercent }}</data>
+      <data
+        :value="level"
+        class="text-md font-light text-my-black-300 dark:text-my-black-200"
+      >
+        {{ levelPercent }}
+      </data>
     </header>
 
     <section>
-      <div class="w-full h-2 rounded-md bg-gray-100 dark:bg-my-black-800 shadow-inner">
-        <div class="h-full rounded-md bg-gradient-to-r from-amber-300 to-amber-400" :style="{ width: levelPercent }"></div>
+      <div class="h-2 w-full rounded-md bg-gray-100 shadow-inner dark:bg-my-black-800">
+        <div
+          class="h-full rounded-md bg-gradient-to-r from-amber-300 to-amber-400"
+          :style="{ width: levelPercent }"
+        ></div>
       </div>
     </section>
   </section>

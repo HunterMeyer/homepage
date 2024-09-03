@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-  a, button {
+  a,
+  button {
     @apply focus:outline-none focus-visible:ring focus-visible:ring-yellow-500;
   }
 }

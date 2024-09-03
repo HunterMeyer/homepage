@@ -17,7 +17,7 @@ export const portfolioData = [
     imageUrl: "/images/portfolio/jrdevjobs.webp",
     visible: true,
     css: {
-      'object-position': 'center top',
+      "object-position": "center top",
     },
   },
   {
@@ -38,7 +38,7 @@ export const portfolioData = [
     imageUrl: "/images/portfolio/backspace.webp",
     visible: true,
     css: {
-      'object-position': 'center top',
+      "object-position": "center top",
     },
   },
   {
@@ -50,7 +50,7 @@ export const portfolioData = [
     imageUrl: "/images/portfolio/edge-guard.webp",
     visible: true,
     css: {
-      'object-position': 'center top',
+      "object-position": "center top",
     },
   },
   {
@@ -62,7 +62,7 @@ export const portfolioData = [
     imageUrl: "/images/portfolio/zenscapes.webp",
     visible: true,
     css: {
-      'object-position': 'center top',
+      "object-position": "center top",
     },
   },
   {
@@ -92,7 +92,7 @@ export const portfolioData = [
     imageUrl: "/images/portfolio/bac.webp",
     visible: true,
     css: {
-      'object-position': 'center top',
+      "object-position": "center top",
     },
   },
   {

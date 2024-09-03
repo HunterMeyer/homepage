@@ -2,13 +2,13 @@
   <button
     @click="toggleTheme"
     title="Toggle theme"
-    class="
-      flex
-      rounded-sm
-      text-yellow-500
-    "
+    class="flex rounded-sm text-yellow-500"
   >
-    <v-icon :name="themeIcon" scale="1.1" label="Toggle theme" />
+    <v-icon
+      :name="themeIcon"
+      scale="1.1"
+      label="Toggle theme"
+    />
   </button>
 </template>
 
