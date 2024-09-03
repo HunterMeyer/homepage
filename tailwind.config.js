@@ -28,6 +28,9 @@ export default {
           "100%": { transform: "scale(1)" },
         },
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],
