@@ -3,91 +3,121 @@
 @tailwind utilities;
 
 @layer components {
+  html, body, #app {
+    @apply w-full h-full
+  }
+
   a, button {
     @apply focus:outline-none focus-visible:ring focus-visible:ring-yellow-500;
   }
 }
 
+:root {
+  --neu-bg-base: theme(colors.stone.200);
+  --neu-bg-start: theme(colors.stone.100);
+  --neu-bg-end: theme(colors.stone.300);
+  --neu-shadow-start: theme(colors.white / 75%);
+  --neu-shadow-end: theme(colors.stone.400 / 60%);
+}
+
+.dark {
+  --neu-bg-base: theme(colors.my-black.900);
+  --neu-bg-start: theme(colors.my-black.600);
+  --neu-bg-end: theme(colors.my-black.800);
+  --neu-shadow-start: theme(colors.my-black.600 / 75%);
+  --neu-shadow-end: theme(colors.my-black.900 / 60%);
+}
+
+.neu-shadow-flat-2xs {
+  box-shadow: 2px 2px 4px var(--neu-shadow-end),
+              -2px -2px 4px var(--neu-shadow-start);
+}
 .neu-shadow-flat-xs {
-  background: #e0e0e0;
-  box-shadow: 5px 5px 10px #bebebe,
-              -5px -5px 10px #ffffff;
+  box-shadow: 5px 5px 10px var(--neu-shadow-end),
+              -5px -5px 10px var(--neu-shadow-start);
 }
 .neu-shadow-flat-sm {
-  background: #e0e0e0;
-  box-shadow: 10px 10px 20px #bebebe,
-              -10px -10px 20px #ffffff;
+  box-shadow: 10px 10px 20px var(--neu-shadow-end),
+              -10px -10px 20px var(--neu-shadow-start);
 }
 .neu-shadow-flat-md {
-  background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe,
-              -15px -15px 30px #ffffff;
+  box-shadow: 15px 15px 30px var(--neu-shadow-end),
+              -15px -15px 30px var(--neu-shadow-start);
 }
 .neu-shadow-flat-lg {
-  background: #e0e0e0;
-  box-shadow: 20px 20px 60px #bebebe,
-              -20px -20px 60px #ffffff
+  box-shadow: 20px 20px 60px var(--neu-shadow-end),
+              -20px -20px 60px var(--neu-shadow-start)
 }
 
+.neu-shadow-concave-2xs {
+  background: linear-gradient(145deg, var(--neu-bg-start), var(--neu-bg-end));
+  box-shadow: 2px 2px 4px var(--neu-shadow-end),
+              -2px -2px 4px var(--neu-shadow-start);
+}
 .neu-shadow-concave-xs {
-  background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow: 5px 5px 10px #bebebe,
-              -5px -5px 10px #ffffff;
+  background: linear-gradient(145deg, var(--neu-bg-start), var(--neu-bg-end));
+  box-shadow: 5px 5px 10px var(--neu-shadow-end),
+              -5px -5px 10px var(--neu-shadow-start);
 }
 .neu-shadow-concave-sm {
-  background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow: 10px 10px 20px #bebebe,
-              -10px -10px 20px #ffffff;
+  background: linear-gradient(145deg, var(--neu-bg-start), var(--neu-bg-end));
+  box-shadow: 10px 10px 20px var(--neu-shadow-end),
+              -10px -10px 20px var(--neu-shadow-start);
 }
 .neu-shadow-concave-md {
-  background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow: 15px 15px 30px #bebebe,
-              -15px -15px 30px #ffffff;
+  background: linear-gradient(145deg, var(--neu-bg-start), var(--neu-bg-end));
+  box-shadow: 15px 15px 30px var(--neu-shadow-end),
+              -15px -15px 30px var(--neu-shadow-start);
 }
 .neu-shadow-concave-lg {
-  background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow: 20px 20px 60px #bebebe,
-              -20px -20px 60px #ffffff
+  background: linear-gradient(145deg, var(--neu-bg-start), var(--neu-bg-end));
+  box-shadow: 20px 20px 60px var(--neu-shadow-end),
+              -20px -20px 60px var(--neu-shadow-start)
 }
 
+.neu-shadow-convex-2xs {
+  background: linear-gradient(145deg, var(--neu-bg-end), var(--neu-bg-start));
+  box-shadow: 2px 2px 4px var(--neu-shadow-end),
+              -2px -2px 4px var(--neu-shadow-start);
+}
 .neu-shadow-convex-xs {
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow: 5px 5px 10px #bebebe,
-              -5px -5px 10px #ffffff;
+  background: linear-gradient(145deg, var(--neu-bg-end), var(--neu-bg-start));
+  box-shadow: 5px 5px 10px var(--neu-shadow-end),
+              -5px -5px 10px var(--neu-shadow-start);
 }
 .neu-shadow-convex-sm {
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow: 10px 10px 20px #bebebe,
-              -10px -10px 20px #ffffff;
+  background: linear-gradient(145deg, var(--neu-bg-end), var(--neu-bg-start));
+  box-shadow: 10px 10px 20px var(--neu-shadow-end),
+              -10px -10px 20px var(--neu-shadow-start);
 }
 .neu-shadow-convex-md {
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow: 15px 15px 30px #bebebe,
-              -15px -15px 30px #ffffff;
+  background: linear-gradient(145deg, var(--neu-bg-end), var(--neu-bg-start));
+  box-shadow: 15px 15px 30px var(--neu-shadow-end),
+              -15px -15px 30px var(--neu-shadow-start);
 }
 .neu-shadow-convex-lg {
-  background: linear-gradient(145deg, #f0f0f0, #cacaca);
-  box-shadow: 20px 20px 60px #bebebe,
-              -20px -20px 60px #ffffff
+  background: linear-gradient(145deg, var(--neu-bg-end), var(--neu-bg-start));
+  box-shadow: 20px 20px 60px var(--neu-shadow-end),
+              -20px -20px 60px var(--neu-shadow-start)
 }
 
+.neu-shadow-inset-2xs {
+  box-shadow: inset 2px 2px 4px var(--neu-shadow-end),
+              inset -2px -2px 4px var(--neu-shadow-start);
+}
 .neu-shadow-inset-xs {
-  background: #e0e0e0;
-  box-shadow: inset 5px 5px 10px #bebebe,
-              inset -5px -5px 10px #ffffff;
+  box-shadow: inset 5px 5px 10px var(--neu-shadow-end),
+              inset -5px -5px 10px var(--neu-shadow-start);
 }
 .neu-shadow-inset-sm {
-  background: #e0e0e0;
-  box-shadow: inset 10px 10px 20px #bebebe,
-              inset -10px -10px 20px #ffffff;
+  box-shadow: inset 10px 10px 20px var(--neu-shadow-end),
+              inset -10px -10px 20px var(--neu-shadow-start);
 }
 .neu-shadow-inset-md {
-  background: #e0e0e0;
-  box-shadow: inset 15px 15px 30px #bebebe,
-              inset -15px -15px 30px #ffffff;
+  box-shadow: inset 15px 15px 30px var(--neu-shadow-end),
+              inset -15px -15px 30px var(--neu-shadow-start);
 }
 .neu-shadow-inset-lg {
-  background: #e0e0e0;
-  box-shadow: inset 20px 20px 40px #bebebe,
-              inset -20px -20px 40px #ffffff;
+  box-shadow: inset 20px 20px 40px var(--neu-shadow-end),
+              inset -20px -20px 40px var(--neu-shadow-start);
 }

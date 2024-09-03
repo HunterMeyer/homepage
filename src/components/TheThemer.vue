@@ -4,11 +4,15 @@
     title="Toggle theme"
     class="
       flex
-      rounded-sm
+      transition-colors ease-in
+      rounded-lg
+      p-1.5
       text-yellow-500
+      hover:text-yellow-600
+      neu-shadow-flat-2xs
     "
   >
-    <v-icon :name="themeIcon" scale="1.1" label="Toggle theme" />
+    <v-icon :name="themeIcon" scale="0.8" label="Toggle theme" />
   </button>
 </template>
 

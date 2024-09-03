@@ -9,10 +9,10 @@
       lg:self-start
       p-4
       md:p-8
-      bg-white
-      dark:bg-my-black-700
-      shadow-lg
       rounded-3xl
+      bg-stone-200
+      dark:bg-my-black-700
+      neu-shadow-inset-xs
     "
   >
     <div class="flex flex-col gap-4 md:gap-6">
@@ -27,8 +27,8 @@
           </div>
         </header>
       </div>
-      <div data-component="separator" class="h-px rounded-full bg-gray-200 dark:bg-my-black-500"></div>
-      <div class="flex flex-row gap-4 lg:gap-0 items-center lg:justify-between">
+      <div data-component="separator" class="h-px rounded-full bg-stone-300 dark:bg-my-black-500"></div>
+      <div class="flex flex-row gap-4 lg:gap-4 items-center lg:justify-between">
         <SocialLink
           v-for="(link, index) in socialLinksData"
           :key="index"

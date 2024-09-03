@@ -1,5 +1,17 @@
 <template>
-  <section class="relative w-full rounded-3xl p-4 md:p-8 shadow-lg bg-white dark:bg-my-black-700 "">
+  <section
+    data-component="card"
+    class="
+      relative
+      w-full
+      p-4
+      md:p-8
+      rounded-3xl
+      bg-stone-200
+      dark:bg-my-black-700
+      neu-shadow-inset-xs
+    "
+  >
     <TheNavbar :items="navItems" @item-select="setActive" />
     <AboutMe v-if="activeItemId === 'about'" />
     <Resume v-if="activeItemId === 'resume'" />

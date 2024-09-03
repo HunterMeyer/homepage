@@ -5,7 +5,7 @@
       <Strike />
     </header>
 
-    <section class="flex flex-col gap-4 font-light">
+    <section class="flex flex-col gap-4">
       <p>
         <span class="font-bold">Hi there!</span> I am a results-driven full-stack software engineer with a decade
         of experience. I am adept at instituting high-quality coding standards and architecture,

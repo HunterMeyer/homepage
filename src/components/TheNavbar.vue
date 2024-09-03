@@ -3,14 +3,12 @@
     max-md:fixed
     md:absolute
     max-md:bottom-0
-    md:top-0
+    md:top-6
     right-0
     max-md:w-full
-    bg-black
-    md:bg-black
-    dark:bg-my-black-500/70
-    md:dark:bg-my-black-500
-    max-md:backdrop-blur-md
+    bg-stone-200
+    dark:bg-my-black-700
+    md:bg-transparent
     max-md:rounded-t-3xl
     md:rounded-tr-3xl
     md:rounded-bl-3xl
@@ -26,7 +24,7 @@
         @click.prevent="handleClick(item)"
         :key="index"
         :href="`#${item.id}`"
-        :class="{ active: item.id === activeItemId }"
+        :class="{ 'active neu-shadow-inset-2xs': item.id === activeItemId }"
         class="
           text-sm
           md:text-md
@@ -34,8 +32,11 @@
           py-2
           rounded-md
           transition-colors ease-in
-          [&.active]:text-yellow-500 [&.active]:hover:text-yellow-500
-          text-white hover:text-my-black-100
+          [&.active]:text-yellow-600 [&.active]:hover:text-yellow-600
+          text-stone-800 hover:text-stone-900
+          dark:text-my-black-200
+          dark:hover:text-white
+          neu-shadow-convex-2xs
         "
       >
         {{ item.title }}
