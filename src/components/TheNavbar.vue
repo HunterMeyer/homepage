@@ -32,7 +32,7 @@
           py-2
           rounded-md
           transition-colors ease-in
-          [&.active]:text-yellow-600 [&.active]:hover:text-yellow-600
+          [&.active]:text-yellow-500 [&.active]:hover:text-yellow-500
           text-stone-800 hover:text-stone-900
           dark:text-my-black-200
           dark:hover:text-white
