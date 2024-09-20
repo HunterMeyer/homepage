@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    overflow: auto;
+  }
+
   html,
   body {
     width: 100%;
