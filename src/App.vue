@@ -8,6 +8,7 @@ import { setInitialTheme } from "@/utils/theme"
 import Layout from "@/components/Layout.vue"
 
 onBeforeMount(() => {
-  setInitialTheme()
+  // TODO: Remove if adding TheThemer
+  // setInitialTheme()
 })
 </script>

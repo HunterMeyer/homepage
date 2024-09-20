@@ -1,8 +1,5 @@
 <template>
-  <section
-    data-component="sidebar"
-    class="w-full rounded-3xl bg-white p-4 shadow-lg md:p-8 lg:sticky lg:top-10 lg:w-min lg:self-start dark:bg-my-black-700"
-  >
+  <BaseCard class="lg:sticky lg:top-10 lg:w-min lg:self-start">
     <div class="flex flex-col gap-4 md:gap-6">
       <div class="flex items-center gap-4 md:gap-6 lg:flex-col">
         <figure>
@@ -19,7 +16,7 @@
             {{ personData.name }}
           </h1>
           <div
-            class="rounded-lg bg-black px-3 py-1 text-center text-xs font-light text-white dark:bg-my-black-500"
+            class="rounded-lg bg-black px-3 py-1 text-center text-xs font-light text-white dark:bg-my-black-800/50"
           >
             {{ personData.badge }}
           </div>
@@ -27,7 +24,7 @@
       </div>
       <div
         data-component="separator"
-        class="h-px rounded-full bg-gray-200 dark:bg-my-black-500"
+        class="h-px rounded-full bg-gray-200 dark:bg-gray-200/20"
       ></div>
       <div class="flex flex-row items-center gap-4 lg:justify-between lg:gap-0">
         <SocialLink
@@ -35,11 +32,11 @@
           :key="index"
           :link="link"
         />
-        <div class="grow lg:hidden"></div>
-        <TheThemer />
+        <!-- <div class="grow lg:hidden"></div> -->
+        <!-- <TheThemer /> -->
       </div>
     </div>
-  </section>
+  </BaseCard>
 </template>
 
 <script setup>
@@ -47,4 +44,5 @@ import { socialLinksData } from "@/data/social-links.js"
 import { personData } from "@/data/person.js"
 import TheThemer from "./TheThemer.vue"
 import SocialLink from "./Person/SocialLink.vue"
+import BaseCard from "./BaseCard.vue"
 </script>

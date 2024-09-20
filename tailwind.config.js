@@ -1,7 +1,10 @@
 /** @type {import("tailwindcss").Config} */
 
 export default {
-  content: ["./src/**/*.vue"],
+  content: [
+    "./src/**/*.vue",
+    "index.html",
+  ],
   darkMode: "selector",
   theme: {
     fontFamily: {
