@@ -1,6 +1,9 @@
 <template>
   <article class="flex flex-col gap-4">
-    <TimelineHeader title="Skills" icon-name="ri-code-s-slash-line" />
+    <TimelineHeader
+      title="Skills"
+      icon-name="ri-code-s-slash-line"
+    />
 
     <section class="flex flex-col gap-5 p-2">
       <SkillsItem

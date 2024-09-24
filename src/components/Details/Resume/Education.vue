@@ -1,6 +1,9 @@
 <template>
   <article class="flex flex-col gap-4">
-    <TimelineHeader title="Education" icon-name="ri-book-open-line" />
+    <TimelineHeader
+      title="Education"
+      icon-name="ri-book-open-line"
+    />
 
     <section class="ml-16">
       <div class="ml-1">
