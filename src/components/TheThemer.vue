@@ -4,21 +4,13 @@
     title="Toggle theme"
     class="flex rounded-sm text-yellow-500"
   >
-    <v-icon
-      :name="themeIcon"
-      scale="1.1"
-      label="Toggle theme"
-    />
+    <i :class="themeIcon" />
   </button>
 </template>
 
 <script setup>
 import { onBeforeMount, ref } from "vue"
-import { addIcons } from "oh-vue-icons"
-import { RiSunFill, RiMoonClearFill } from "oh-vue-icons/icons"
 import { Themes, currentTheme, saveTheme } from "@/utils/theme.js"
-
-addIcons(RiSunFill, RiMoonClearFill)
 
 const themeIcon = ref()
 

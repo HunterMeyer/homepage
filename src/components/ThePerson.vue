@@ -32,8 +32,6 @@
           :key="index"
           :link="link"
         />
-        <!-- <div class="grow lg:hidden"></div> -->
-        <!-- <TheThemer /> -->
       </div>
     </div>
   </BaseCard>
@@ -42,7 +40,6 @@
 <script setup>
 import { socialLinksData } from "@/data/social-links.js"
 import { personData } from "@/data/person.js"
-import TheThemer from "./TheThemer.vue"
 import SocialLink from "./Person/SocialLink.vue"
 import BaseCard from "./BaseCard.vue"
 </script>

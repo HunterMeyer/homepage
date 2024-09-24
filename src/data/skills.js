@@ -30,7 +30,7 @@ export const skillsData = [
     visible: true,
   },
   {
-    title: "Leadership, Ownership, and Execution",
+    title: "Leadership and Execution",
     level: 90,
     visible: true,
   },

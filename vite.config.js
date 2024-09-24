@@ -8,9 +8,6 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  optimizeDeps: {
-    exclude: ["oh-vue-icons/icons"],
-  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

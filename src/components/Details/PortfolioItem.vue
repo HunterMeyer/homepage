@@ -13,7 +13,7 @@
           v-if="hasUrl"
           class="absolute left-1/2 top-1/2 z-10 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 scale-75 items-center justify-center rounded-2xl bg-white text-yellow-500 opacity-0 shadow-lg transition-all duration-200 ease-in-out group-hover:scale-100 group-hover:opacity-100 dark:bg-my-black-700/85"
         >
-          <v-icon name="co-external-link" />
+          <i class="ri-external-link-line text-xl" />
         </div>
         <img
           :src="item.imageUrl"
@@ -40,11 +40,6 @@
 </template>
 
 <script setup>
-import { addIcons } from "oh-vue-icons"
-import { CoExternalLink } from "oh-vue-icons/icons"
-
-addIcons(CoExternalLink)
-
 const props = defineProps({
   item: {
     type: Object,
