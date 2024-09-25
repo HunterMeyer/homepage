@@ -3,7 +3,7 @@
     :href="link.url"
     :title="link.title"
     target="_blank"
-    class="flex rounded-sm text-xl leading-5 text-my-black-300 transition-colors ease-in hover:text-black dark:text-gray-300 dark:hover:text-white"
+    class="flex rounded-sm text-2xl leading-5 text-my-black-300 transition-colors duration-150 ease-in hover:text-black dark:text-white dark:hover:text-yellow-500"
   >
     <i :class="link.iconName" />
   </a>

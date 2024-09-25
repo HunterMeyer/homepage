@@ -8,7 +8,7 @@
           :href="url"
           :title="title"
           target="_blank"
-          class="rounded-md text-black transition-colors ease-in hover:text-yellow-500 dark:text-white"
+          class="rounded-md text-black transition-colors duration-150 ease-in hover:text-yellow-500 dark:text-white"
         >
           {{ title }}
         </a>

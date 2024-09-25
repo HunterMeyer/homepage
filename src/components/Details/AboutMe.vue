@@ -38,6 +38,6 @@ const meyerVisionsLinkAttrs = {
   target: "_blank",
   title: "Meyer Visions",
   class:
-    "font-bold transition-colors ease-in hover:text-yellow-500 underline whitespace-nowrap rounded-md",
+    "font-bold transition-colors ease-in duration-150 hover:text-yellow-500 underline whitespace-nowrap rounded-md",
 }
 </script>

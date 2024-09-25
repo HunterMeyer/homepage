@@ -1,6 +1,6 @@
 <template>
   <BaseCard class="lg:sticky lg:top-10 lg:w-min lg:self-start">
-    <div class="flex flex-col gap-4 md:gap-6">
+    <div class="flex flex-col gap-6">
       <div class="flex items-center gap-4 md:gap-6 lg:flex-col">
         <figure>
           <img
@@ -26,7 +26,7 @@
         data-component="separator"
         class="h-px rounded-full bg-gray-200 dark:bg-gray-200/20"
       ></div>
-      <div class="flex flex-row items-center gap-4 lg:justify-between lg:gap-0">
+      <div class="flex flex-row items-center justify-around lg:justify-between">
         <SocialLink
           v-for="(link, index) in socialLinksData"
           :key="index"
