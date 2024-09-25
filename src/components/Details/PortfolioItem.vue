@@ -27,7 +27,7 @@
       <header class="ml-1">
         <h3
           :class="{ 'group-hover:text-yellow-500': hasUrl }"
-          class="text-lg font-medium transition-colors duration-150 ease-in-out"
+          class="text-lg font-medium"
         >
           {{ item.name }}
         </h3>

@@ -20,7 +20,14 @@
 
       <p>
         I also invest in building fast-growing technology companies, with my wife over at
-        <a v-bind="meyerVisionsLinkAttrs">Meyer Visions</a>.
+        <a
+          href="https://www.meyervisions.com"
+          target="_blank"
+          title="Meyer Visions"
+          class="font-bold hover:text-yellow-500 underline whitespace-nowrap rounded-md"
+        >
+          Meyer Visions
+        </a>.
       </p>
 
       <br />
@@ -32,12 +39,4 @@
 <script setup>
 import Strike from "@/components/Strike.vue"
 import BaseCard from "../BaseCard.vue"
-
-const meyerVisionsLinkAttrs = {
-  href: "https://www.meyervisions.com",
-  target: "_blank",
-  title: "Meyer Visions",
-  class:
-    "font-bold transition-colors ease-in duration-150 hover:text-yellow-500 underline whitespace-nowrap rounded-md",
-}
 </script>

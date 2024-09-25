@@ -9,7 +9,7 @@
         :key="index"
         :href="`#${item.id}`"
         :class="{ active: item.id === activeItemId }"
-        class="md:text-md flex-1 basis-0 rounded-md px-4 py-2 text-center text-sm text-white transition-colors ease-in hover:text-gray-400 dark:text-gray-300 dark:hover:text-white [&.active]:text-yellow-500 [&.active]:hover:text-yellow-500"
+        class="md:text-md flex-1 basis-0 rounded-md px-4 py-2 text-center text-sm text-white hover:text-gray-400 dark:text-gray-300 dark:hover:text-white [&.active]:text-yellow-500 [&.active]:hover:text-yellow-500"
       >
         {{ item.title }}
       </a>
