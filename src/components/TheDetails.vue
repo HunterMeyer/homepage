@@ -4,16 +4,20 @@
       :items="navItems"
       @item-select="setActive"
     />
-    <AboutMe v-if="activeItemId === 'about'" />
-    <Resume v-if="activeItemId === 'resume'" />
-    <Portfolio v-if="activeItemId === 'portfolio'" />
+    <template v-for="item in navItems">
+      <component
+        v-if="item.id === activeItemId"
+        :is="item.component"
+        :key="item.id"
+      />
+    </template>
   </section>
 </template>
 
 <script setup>
 import { ref, computed } from "vue"
 import TheNavbar from "./TheNavbar.vue"
-import { AboutMe, Resume, Portfolio } from "./Details/index.js"
+import { AboutMe, Portfolio, ReadingList, Resume } from "./Details/index.js"
 
 const activeItem = ref()
 
@@ -22,9 +26,10 @@ const activeItemId = computed(() => {
 })
 
 const navItems = [
-  { id: "about", title: "About" },
-  { id: "resume", title: "Resume" },
-  { id: "portfolio", title: "Portfolio" },
+  { id: "about", title: "About", component: AboutMe },
+  { id: "resume", title: "Resume", component: Resume },
+  { id: "portfolio", title: "Portfolio", component: Portfolio },
+  { id: "reading-list", title: "Reading List", component: ReadingList },
 ]
 
 const setActive = (item) => {
