@@ -1,10 +1,5 @@
 <template>
-  <BaseCard class="flex flex-col gap-6 text-black dark:text-white">
-    <header class="flex flex-col gap-4">
-      <h2 class="text-3xl font-bold">About me</h2>
-      <Strike />
-    </header>
-
+  <BaseCard class="flex flex-col gap-6 text-black dark:text-white md:pt-20">
     <section class="flex flex-col gap-4 font-light">
       <p>
         <span class="font-bold">Hi there!</span> I am a results-driven full-stack software engineer
@@ -37,6 +32,5 @@
 </template>
 
 <script setup>
-import Strike from "@/components/Strike.vue"
 import BaseCard from "../BaseCard.vue"
 </script>

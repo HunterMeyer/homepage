@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="right-0 z-20 bg-black px-4 py-2 max-md:fixed max-md:bottom-0 max-md:z-20 max-md:w-full max-md:rounded-t-3xl max-md:backdrop-blur-md md:absolute md:top-0 md:rounded-bl-3xl md:rounded-tr-3xl md:bg-black md:px-8 dark:bg-my-black-900/70 md:dark:bg-my-black-800/50"
+    class="right-0 z-20 bg-black px-4 py-2 max-md:fixed max-md:bottom-0 max-md:z-20 w-full rounded-t-3xl max-md:backdrop-blur-md md:absolute md:top-0 md:bg-black md:px-8 dark:bg-my-black-900/70 md:dark:bg-my-black-800/50"
   >
     <div class="flex flex-row md:justify-start md:gap-6">
       <a
