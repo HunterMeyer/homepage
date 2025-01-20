@@ -1,5 +1,10 @@
 <template>
   <BaseCard class="flex flex-col gap-6 text-black dark:text-white md:pt-20">
+    <header class="flex flex-col gap-4 md:hidden">
+      <h2 class="text-3xl font-bold">Readling list</h2>
+      <Strike />
+    </header>
+
     <section class="grid grid-cols-1 gap-8 md:grid-cols-2">
       <PortfolioItem
         v-for="(item, index) in items"
@@ -13,6 +18,7 @@
 <script setup>
 import { readingListData } from "@/data/reading-list.js"
 import BaseCard from "../BaseCard.vue"
+import Strike from "@/components/Strike.vue"
 import PortfolioItem from "./PortfolioItem.vue"
 
 const items = readingListData.filter((item) => item.visible)
