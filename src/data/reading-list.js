@@ -13,7 +13,8 @@ export const readingListData = [
     author: "Edgar Allan Poe",
     genres: ["Poetry", "Science", "Philosophy"],
     url: "https://www.goodreads.com/book/show/62440.Eureka",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347947414i/62440.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347947414i/62440.jpg",
     visible: true,
     readYear: "2025",
     readStatus: readStatus.TO_READ,
@@ -26,7 +27,8 @@ export const readingListData = [
     author: "Murray N. Rothbard",
     genres: ["Economics", "American History"],
     url: "https://www.goodreads.com/book/show/81980.America_s_Great_Depression",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1568753869i/81980.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1568753869i/81980.jpg",
     visible: true,
     readYear: "2025",
     readStatus: readStatus.TO_READ,
@@ -39,7 +41,8 @@ export const readingListData = [
     author: "Howard Gardner",
     genres: ["Psychology", "Education"],
     url: "https://www.goodreads.com/book/show/294035.Frames_Of_Mind",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442332553i/294035.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442332553i/294035.jpg",
     visible: true,
     readYear: "2025",
     readStatus: readStatus.TO_READ,
@@ -52,7 +55,8 @@ export const readingListData = [
     author: "Michael Stephenson",
     genres: ["Psychology", "Education"],
     url: "https://www.goodreads.com/book/show/678657.Patriot_Battles",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528723105i/678657.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528723105i/678657.jpg",
     visible: true,
     readYear: "2025",
     readStatus: readStatus.TO_READ,
@@ -65,7 +69,8 @@ export const readingListData = [
     author: "Brian Kilmeade, Don Yaeger",
     genres: ["American History", "War"],
     url: "https://www.goodreads.com/book/show/24611888-thomas-jefferson-and-the-tripoli-pirates",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1434569443i/24611888.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1434569443i/24611888.jpg",
     visible: true,
     readYear: "2025",
     readStatus: readStatus.READ,
@@ -78,7 +83,8 @@ export const readingListData = [
     author: "Daniel James Brown",
     genres: ["American History", "Survival"],
     url: "https://www.goodreads.com/book/show/36589918-the-indifferent-stars-above",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1510605517i/36589918.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1510605517i/36589918.jpg",
     visible: true,
     readYear: "2025",
     readStatus: readStatus.READ,
@@ -92,7 +98,8 @@ export const readingListData = [
     author: "Alfred Lansing",
     genres: ["History", "Adventure", "Survival"],
     url: "https://www.goodreads.com/book/show/139069.Endurance",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1391329559i/139069.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1391329559i/139069.jpg",
     visible: true,
     readYear: "2024",
     readStatus: readStatus.READ,
@@ -106,7 +113,8 @@ export const readingListData = [
     author: "Tanya Reilly",
     genres: ["Career", "Engineering"],
     url: "https://www.goodreads.com/book/show/61058107-the-staff-engineer-s-path",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1661205628i/61058107.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1661205628i/61058107.jpg",
     visible: true,
     readYear: "2024",
     readStatus: readStatus.READ,
@@ -119,7 +127,8 @@ export const readingListData = [
     author: "Brian Cagneey",
     genres: ["Life Coaching", "Psychology"],
     url: "https://www.goodreads.com/book/show/33670327-growth-mindset",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483417316i/33670327.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483417316i/33670327.jpg",
     visible: true,
     readYear: "2024",
     readStatus: readStatus.READ,
@@ -133,7 +142,8 @@ export const readingListData = [
     author: "Pete Hamill",
     genres: ["Fiction", "Fantasy", "Time Travel"],
     url: "https://www.goodreads.com/book/show/148465.Forever",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442120422i/148465.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1442120422i/148465.jpg",
     visible: true,
     readYear: "2024",
     readStatus: readStatus.READ,
@@ -146,7 +156,8 @@ export const readingListData = [
     author: "Peter Thiel, Blake Masters",
     genres: ["Entrepreneurship", "Technology"],
     url: "https://www.goodreads.com/book/show/18050143-zero-to-one",
-    imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630663027i/18050143.jpg",
+    imageUrl:
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1630663027i/18050143.jpg",
     visible: true,
     readYear: "2024",
     readStatus: readStatus.READ,

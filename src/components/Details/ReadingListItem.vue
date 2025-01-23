@@ -32,7 +32,7 @@
           {{ item.title }}
         </h3>
         <p class="text-md font-light text-my-black-300 dark:text-gray-300">
-          {{  item.author }}
+          {{ item.author }}
         </p>
         <p class="mt-2 text-xs text-my-black-300 dark:text-gray-300">
           {{ item.description }}
