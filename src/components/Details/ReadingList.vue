@@ -6,7 +6,7 @@
     </header>
 
     <section class="grid grid-cols-1 gap-8 md:grid-cols-2">
-      <PortfolioItem
+      <ReadingListItem
         v-for="(item, index) in items"
         :key="index"
         :item="item"
@@ -19,7 +19,7 @@
 import { readingListData } from "@/data/reading-list.js"
 import BaseCard from "../BaseCard.vue"
 import Strike from "@/components/Strike.vue"
-import PortfolioItem from "./PortfolioItem.vue"
+import ReadingListItem from "./ReadingListItem.vue"
 
 const items = readingListData.filter((item) => item.visible)
 </script>
