@@ -29,7 +29,7 @@ export const readingListData = [
     url: "https://www.goodreads.com/book/show/81980.America_s_Great_Depression",
     imageUrl:
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1568753869i/81980.jpg",
-    visible: true,
+    visible: false,
     readYear: "2025",
     readStatus: readStatus.TO_READ,
   },
@@ -57,7 +57,7 @@ export const readingListData = [
     url: "https://www.goodreads.com/book/show/678657.Patriot_Battles",
     imageUrl:
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1528723105i/678657.jpg",
-    visible: true,
+    visible: false,
     readYear: "2025",
     readStatus: readStatus.TO_READ,
   },
