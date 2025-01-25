@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="right-0 z-20 w-full rounded-t-3xl md:px-8 py-3 md:py-2 md:pt-5 max-md:fixed max-md:bottom-0 max-md:z-20 max-md:backdrop-blur-md md:absolute md:top-0 max-md:bg-black max-md:dark:bg-my-black-800/50"
+    class="right-0 z-20 w-full rounded-t-3xl py-3 max-md:fixed max-md:bottom-0 max-md:z-20 max-md:bg-black max-md:backdrop-blur-md md:absolute md:top-0 md:px-8 md:py-2 md:pt-5 max-md:dark:bg-my-black-800/50"
   >
     <div class="flex flex-row justify-evenly">
       <a
@@ -9,7 +9,7 @@
         :key="index"
         :href="`#${item.id}`"
         :class="{ active: item.id === activeItemId }"
-        class="shadow-lg md:text-md rounded-2xl py-2 px-4 [&.active]:border-yellow-500/50 border-gray-200/20 border text-center text-sm text-white hover:text-gray-400 dark:text-gray-300 dark:hover:text-white [&.active]:text-yellow-500 [&.active]:hover:text-yellow-500 [&.active]:bg-yellow-500/10"
+        class="md:text-md rounded-2xl border border-gray-200/20 px-4 py-2 text-center text-sm text-white shadow-lg hover:text-gray-400 dark:text-gray-300 dark:hover:text-white [&.active]:border-yellow-500/50 [&.active]:bg-yellow-500/10 [&.active]:text-yellow-500 [&.active]:hover:text-yellow-500"
       >
         {{ item.title }}
       </a>
