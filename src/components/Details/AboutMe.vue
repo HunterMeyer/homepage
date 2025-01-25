@@ -1,6 +1,6 @@
 <template>
-  <BaseCard class="flex flex-col gap-6 text-black dark:text-white">
-    <header class="flex flex-col gap-4">
+  <BaseCard class="flex flex-col gap-6 text-black md:pt-20 dark:text-white">
+    <header class="flex flex-col gap-4 md:hidden">
       <h2 class="text-3xl font-bold">About me</h2>
       <Strike />
     </header>
@@ -24,10 +24,10 @@
           href="https://www.meyervisions.com"
           target="_blank"
           title="Meyer Visions"
-          class="font-bold hover:text-yellow-500 underline whitespace-nowrap rounded-md"
+          class="whitespace-nowrap rounded-md font-bold underline hover:text-yellow-500"
         >
-          Meyer Visions
-        </a>.
+          Meyer Visions </a
+        >.
       </p>
 
       <br />
