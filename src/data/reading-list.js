@@ -20,7 +20,7 @@ export const readingListData = [
     readStatus: readStatus.TO_READ,
   },
   {
-    title: "America's Great Depressio",
+    title: "America's Great Depression",
     subtitle: null,
     description: `A staple of modern economic literature and crucial for understanding
       a pivotal event in American and world history...`,
