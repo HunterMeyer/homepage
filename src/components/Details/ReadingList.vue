@@ -5,7 +5,7 @@
       <Strike />
     </header>
 
-    <section class="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <section class="grid grid-cols-1 gap-8">
       <ReadingListItem
         v-for="(item, index) in items"
         :key="index"

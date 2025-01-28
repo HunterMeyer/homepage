@@ -31,7 +31,7 @@
         >
           {{ item.name }}
         </h3>
-        <p class="text-md font-light text-my-black-300 dark:text-gray-300">
+        <p class="text-base font-light text-my-black-300 dark:text-gray-300">
           {{ item.caption }}
         </p>
       </header>

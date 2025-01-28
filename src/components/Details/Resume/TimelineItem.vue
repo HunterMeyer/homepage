@@ -14,8 +14,8 @@
         </a>
       </h4>
     </header>
-    <p class="text-md font-light text-my-black-300 dark:text-gray-300">{{ subtitle }}</p>
-    <p class="text-md text-yellow-500 dark:text-yellow-400/80">{{ dates }}</p>
+    <p class="text-base font-light text-my-black-300 dark:text-gray-300">{{ subtitle }}</p>
+    <p class="text-base text-yellow-500 dark:text-yellow-400/80">{{ dates }}</p>
   </section>
 </template>
 

@@ -1,10 +1,10 @@
 <template>
   <section class="flex flex-col gap-2">
     <header class="flex flex-row items-baseline gap-1.5">
-      <h4 class="text-md font-medium">{{ title }}</h4>
+      <h4 class="text-base font-medium">{{ title }}</h4>
       <data
         :value="level"
-        class="text-md font-light text-my-black-300 dark:text-gray-300"
+        class="text-base font-light text-my-black-300 dark:text-gray-300"
       >
         {{ levelPercent }}
       </data>

@@ -9,7 +9,7 @@
         :key="index"
         :href="`#${item.id}`"
         :class="{ active: item.id === activeItemId }"
-        class="md:text-md rounded-2xl border border-gray-200/20 px-4 py-2 text-center text-sm text-white shadow-lg hover:text-gray-400 dark:text-gray-300 dark:hover:text-white [&.active]:border-yellow-500/50 [&.active]:bg-yellow-500/10 [&.active]:text-yellow-500 [&.active]:hover:text-yellow-500"
+        class="md:text-base rounded-2xl border border-gray-200/20 px-4 py-2 text-center text-sm text-white shadow-lg hover:text-gray-400 dark:text-gray-300 dark:hover:text-white [&.active]:border-yellow-500/50 [&.active]:bg-yellow-500/10 [&.active]:text-yellow-500 [&.active]:hover:text-yellow-500"
       >
         {{ item.title }}
       </a>

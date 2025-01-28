@@ -15,11 +15,7 @@
           >
             {{ personData.name }}
           </h1>
-          <div
-            class="rounded-lg bg-black px-3 py-1 text-center text-xs font-light text-white dark:bg-my-black-800/50"
-          >
-            {{ personData.badge }}
-          </div>
+          <BaseBadge :title="personData.badge" />
         </header>
       </div>
       <div
@@ -42,4 +38,5 @@ import { socialLinksData } from "@/data/social-links.js"
 import { personData } from "@/data/person.js"
 import SocialLink from "./Person/SocialLink.vue"
 import BaseCard from "./BaseCard.vue"
+import BaseBadge from "./BaseBadge.vue"
 </script>
