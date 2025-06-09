@@ -28,7 +28,7 @@ const activeItemId = computed(() => {
 const navItems = [
   { id: "about", title: "About", component: AboutMe },
   { id: "resume", title: "Resume", component: Resume },
-  { id: "portfolio", title: "Portfolio", component: Portfolio },
+  { id: "projects", title: "Projects", component: Portfolio },
   { id: "reading-list", title: "Reading", component: ReadingList },
 ]
 

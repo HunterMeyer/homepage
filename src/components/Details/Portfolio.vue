@@ -1,7 +1,7 @@
 <template>
   <BaseCard class="flex flex-col gap-6 text-black md:pt-20 dark:text-white">
     <header class="flex flex-col gap-4 md:hidden">
-      <h2 class="text-3xl font-bold">Portfolio</h2>
+      <h2 class="text-3xl font-bold">Projects</h2>
       <Strike />
     </header>
 
