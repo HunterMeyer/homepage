@@ -29,7 +29,7 @@ const navItems = [
   { id: "about", title: "About", component: AboutMe },
   { id: "resume", title: "Resume", component: Resume },
   { id: "portfolio", title: "Portfolio", component: Portfolio },
-  { id: "books", title: "Books", component: ReadingList },
+  { id: "reading-list", title: "Reading", component: ReadingList },
 ]
 
 const setActive = (item) => {
