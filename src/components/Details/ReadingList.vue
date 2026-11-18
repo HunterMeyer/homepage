@@ -1,6 +1,6 @@
 <template>
-  <BaseCard class="flex flex-col gap-6 text-black md:pt-24 dark:text-white">
-    <header class="flex flex-col gap-4 md:hidden">
+  <BaseCard class="flex flex-col gap-6 text-black dark:text-white">
+    <header class="flex flex-col gap-4">
       <h2 class="text-3xl font-bold">Reading list</h2>
       <Strike />
     </header>
