@@ -2,28 +2,20 @@
   <section class="relative w-full">
     <TheNavbar
       :items="navItems"
-      @item-select="setActive"
+      :active-item-id="activeItemId"
+      @item-select="select"
     />
-    <template v-for="item in navItems">
-      <component
-        v-if="item.id === activeItemId"
-        :is="item.component"
-        :key="item.id"
-      />
-    </template>
+    <component
+      :is="activeItem.component"
+      :key="activeItemId"
+    />
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from "vue"
 import TheNavbar from "./TheNavbar.vue"
 import { AboutMe, Portfolio, ReadingList, Resume } from "./Details/index.js"
-
-const activeItem = ref()
-
-const activeItemId = computed(() => {
-  return activeItem.value?.id
-})
+import { useActiveSection } from "@/composables/useActiveSection.js"
 
 const navItems = [
   { id: "about", title: "About", component: AboutMe },
@@ -32,7 +24,5 @@ const navItems = [
   { id: "reading-list", title: "Reading", component: ReadingList },
 ]
 
-const setActive = (item) => {
-  activeItem.value = item
-}
+const { activeItem, activeItemId, select } = useActiveSection(navItems)
 </script>

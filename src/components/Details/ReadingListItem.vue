@@ -62,6 +62,6 @@ const hasGenres = props.item.genres && props.item.genres.length > 0
 const linkAttrs = {
   href: props.item.url,
   target: "_blank",
-  title: props.item.name,
+  title: props.item.title,
 }
 </script>

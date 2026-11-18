@@ -6,7 +6,7 @@
       class="group flex flex-col gap-2 rounded-2xl"
     >
       <figure
-        :class="{ 'before:group-hover:group-hover:bg-black/50': hasUrl }"
+        :class="{ 'before:group-hover:bg-black/50': hasUrl }"
         class="relative h-56 w-full overflow-hidden rounded-2xl shadow-xl before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-transparent before:transition-all before:duration-200 before:ease-in-out before:content-[''] md:h-44"
       >
         <div

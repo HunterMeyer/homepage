@@ -18,53 +18,20 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted } from "vue"
-import { setPageTitle } from "@/utils/page-title"
-
-const props = defineProps({
+defineProps({
   items: {
     type: Array,
     required: true,
   },
-  initActiveItemId: {
-    type: [String, Number, null],
-    required: false,
-    default: null,
+  activeItemId: {
+    type: [String, Number],
+    required: true,
   },
 })
 
 const emit = defineEmits(["itemSelect"])
 
-const activeItem = ref()
-
-const activeItemId = computed(() => {
-  return activeItem.value?.id
-})
-
-onMounted(() => {
-  setInitialActiveItem()
-})
-
-const setInitialActiveItem = () => {
-  const itemIdFromUrlHash = window.location.hash.substring(1) // remove #-sign
-  const itemIdFromProps = props.initActiveItemId
-  const itemIdFromFirstItem = props.items[0].id
-
-  const activeItemId = itemIdFromUrlHash || itemIdFromProps || itemIdFromFirstItem
-  const activeItem = props.items.find((item) => item.id === activeItemId)
-
-  setActiveItem(activeItem)
-}
-
-const setActiveItem = (item) => {
-  activeItem.value = item
-  setPageTitle(item.title)
-  emit("itemSelect", item)
-}
-
 const handleClick = (item) => {
-  // Only set the hash when the user clicks a link
-  window.history.replaceState(undefined, undefined, `#${item.id}`)
-  setActiveItem(item)
+  emit("itemSelect", item)
 }
 </script>

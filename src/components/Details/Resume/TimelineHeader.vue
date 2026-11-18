@@ -13,7 +13,7 @@
 defineProps({
   title: {
     type: String,
-    require: true,
+    required: true,
   },
   iconName: {
     type: String,
