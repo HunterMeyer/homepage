@@ -1,9 +1,9 @@
 <template>
-  <section class="relative w-full">
+  <section class="relative w-full min-w-0">
     <TheNavbar
       :items="navItems"
       :active-item-id="activeItemId"
-      @item-select="select"
+      @item-select="goTo"
     />
     <div class="flex flex-col gap-4 md:gap-8">
       <component
@@ -21,13 +21,15 @@
 import TheNavbar from "./TheNavbar.vue"
 import { AboutMe, Portfolio, ReadingList, Resume } from "./Details/index.js"
 import { useScrollSpy } from "@/composables/useScrollSpy.js"
+import { useNumberKeyNav } from "@/composables/useNumberKeyNav.js"
 
 const navItems = [
-  { id: "about", title: "About", component: AboutMe },
-  { id: "resume", title: "Resume", component: Resume },
-  { id: "projects", title: "Projects", component: Portfolio },
-  { id: "reading-list", title: "Reading", component: ReadingList },
+  { id: "about", title: "About", icon: "ri-user-3-line", component: AboutMe },
+  { id: "resume", title: "Resume", icon: "ri-sword-line", component: Resume },
+  { id: "projects", title: "Projects", icon: "ri-gamepad-line", component: Portfolio },
+  { id: "reading-list", title: "Reading", icon: "ri-book-2-line", component: ReadingList },
 ]
 
-const { activeItemId, select } = useScrollSpy(navItems)
+const { activeItemId, goTo } = useScrollSpy(navItems)
+useNumberKeyNav(navItems, goTo)
 </script>

@@ -1,21 +1,23 @@
 <template>
-  <BaseCard class="flex flex-col gap-6 text-black dark:text-white">
-    <header class="flex flex-col gap-4">
-      <h2 class="text-3xl font-bold">About me</h2>
-      <Strike />
-    </header>
+  <BaseCard class="flex flex-col gap-6">
+    <SectionHeader
+      title="About me"
+      kicker="Player bio"
+      :stage="1"
+    />
 
-    <section class="flex flex-col gap-4 font-light">
+    <section class="flex flex-col gap-4 leading-relaxed text-arcade-200 md:text-lg">
       <p>
-        <span class="font-bold">Hi there!</span> I am a results-driven full-stack software engineer
-        with a decade of experience. I am adept at instituting high-quality coding standards and
-        architecture, resulting in improved performance, reliability, scalability, and product
-        quality. Proven success in leadership with a track record of delivering impactful changes.
+        <strong class="font-bold text-white">Hi there!</strong> I am a results-driven full-stack
+        software engineer with a decade of experience. I am adept at instituting high-quality coding
+        standards and architecture, resulting in improved performance, reliability, scalability, and
+        product quality. Proven success in leadership with a track record of delivering impactful
+        changes.
       </p>
 
       <p>
-        <span class="font-bold">What else?</span> I'm a husband, father, traveler, terrible guitar
-        player, and I love the drums.
+        <strong class="font-bold text-white">What else?</strong> I'm a husband, father, traveler,
+        terrible guitar player, and I love the drums.
       </p>
 
       <p>
@@ -24,19 +26,58 @@
           href="https://www.meyervisions.com"
           target="_blank"
           title="Meyer Visions"
-          class="whitespace-nowrap rounded-md font-bold underline hover:text-yellow-500"
-        >
-          Meyer Visions </a
+          class="whitespace-nowrap rounded font-bold text-neon-cyan underline decoration-neon-cyan/40 underline-offset-4 transition hover:decoration-neon-cyan hover:drop-shadow-neon"
+          >Meyer Visions</a
         >.
       </p>
-
-      <br />
-      <p>Thanks for stopping by 👋</p>
     </section>
+
+    <dl class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <div
+        v-for="stat in stats"
+        :key="stat.label"
+        class="flex flex-col gap-2 rounded-xl border border-white/10 bg-arcade-950/50 p-3 md:p-4"
+      >
+        <dt class="pixel-label text-arcade-400">{{ stat.label }}</dt>
+        <dd
+          :class="stat.color"
+          class="font-display text-2xl font-bold md:text-3xl"
+        >
+          {{ stat.value }}
+        </dd>
+      </div>
+    </dl>
+
+    <p class="text-arcade-200">
+      Thanks for stopping by 
+      <span
+        class="animate-blink text-neon-cyan"
+        aria-hidden="true"
+        >▌</span
+      >
+    </p>
   </BaseCard>
 </template>
 
 <script setup>
-import Strike from "@/components/Strike.vue"
+import { portfolioData } from "@/data/portfolio.js"
+import { readingListData } from "@/data/reading-list.js"
+import { companyCount, yearsOfExperience } from "@/utils/career.js"
+import SectionHeader from "@/components/SectionHeader.vue"
 import BaseCard from "../BaseCard.vue"
+
+const stats = [
+  { label: "Years XP", value: yearsOfExperience(), color: "text-neon-gold" },
+  { label: "Guilds", value: companyCount, color: "text-neon-cyan" },
+  {
+    label: "Projects",
+    value: portfolioData.filter((item) => item.visible).length,
+    color: "text-neon-magenta",
+  },
+  {
+    label: "Books",
+    value: readingListData.filter((item) => item.visible).length,
+    color: "text-neon-lime",
+  },
+]
 </script>

@@ -1,26 +1,41 @@
 <template>
-  <section
-    class="relative pb-4 before:absolute before:-left-11 before:h-full before:w-px before:bg-gray-200 before:content-[''] after:absolute after:-left-12 after:top-2.5 after:h-2 after:w-2 after:rounded-full after:bg-yellow-500 after:outline after:outline-4 after:outline-white after:content-[''] dark:before:bg-yellow-200/10 dark:after:bg-yellow-500 dark:after:outline-yellow-200/10 [&:first-child]:before:-top-4 [&:first-child]:before:h-[calc(100%+1rem)] [&:last-child]:before:h-2"
-  >
-    <header>
-      <h4 class="text-lg font-medium">
+  <li class="relative pb-6 pl-8 last:pb-0">
+    <!-- Diamond node on the timeline rail -->
+    <span
+      aria-hidden="true"
+      :class="
+        isCurrent
+          ? 'border-neon-magenta bg-neon-magenta shadow-glow-magenta'
+          : 'border-neon-cyan/70 bg-arcade-900'
+      "
+      class="absolute -left-[6.5px] top-2 h-3 w-3 rotate-45 border-2"
+    ></span>
+
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+      <h4 class="text-lg font-bold">
         <a
           :href="url"
           :title="title"
           target="_blank"
-          class="rounded-md text-black hover:text-yellow-500 dark:text-white"
+          class="rounded text-white transition hover:text-neon-cyan"
         >
           {{ title }}
         </a>
       </h4>
-    </header>
-    <p class="text-base font-light text-my-black-300 dark:text-gray-300">{{ subtitle }}</p>
-    <p class="text-base text-yellow-500 dark:text-yellow-400/80">{{ dates }}</p>
-  </section>
+      <BaseBadge
+        :title="dates"
+        :variant="isCurrent ? 'magenta' : 'muted'"
+      />
+    </div>
+    <p class="mt-1 text-arcade-300">{{ subtitle }}</p>
+  </li>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from "vue"
+import BaseBadge from "@/components/BaseBadge.vue"
+
+const props = defineProps({
   title: {
     type: String,
     required: true,
@@ -38,4 +53,6 @@ defineProps({
     required: true,
   },
 })
+
+const isCurrent = computed(() => /present/i.test(props.dates))
 </script>

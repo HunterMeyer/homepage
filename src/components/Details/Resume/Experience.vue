@@ -5,18 +5,16 @@
       icon-name="ri-building-2-line"
     />
 
-    <section class="ml-16">
-      <div class="ml-1">
-        <TimelineItem
-          v-for="(item, index) in items"
-          :key="index"
-          :title="item.company"
-          :subtitle="item.role"
-          :dates="item.dates"
-          :url="item.url"
-        />
-      </div>
-    </section>
+    <ol class="ml-[21.5px] border-l border-neon-cyan/25">
+      <TimelineItem
+        v-for="(item, index) in items"
+        :key="index"
+        :title="item.company"
+        :subtitle="item.role"
+        :dates="item.dates"
+        :url="item.url"
+      />
+    </ol>
   </article>
 </template>
 

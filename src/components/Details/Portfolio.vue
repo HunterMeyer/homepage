@@ -1,14 +1,15 @@
 <template>
-  <BaseCard class="flex flex-col gap-6 text-black dark:text-white">
-    <header class="flex flex-col gap-4">
-      <h2 class="text-3xl font-bold">Projects</h2>
-      <Strike />
-    </header>
+  <BaseCard class="flex flex-col gap-6">
+    <SectionHeader
+      title="Projects"
+      kicker="Game library"
+      :stage="3"
+    />
 
-    <section class="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <section class="grid grid-cols-1 gap-5 sm:grid-cols-2">
       <PortfolioItem
-        v-for="(item, index) in items"
-        :key="index"
+        v-for="item in items"
+        :key="item.name"
         :item="item"
       />
     </section>
@@ -17,7 +18,7 @@
 
 <script setup>
 import { portfolioData } from "@/data/portfolio.js"
-import Strike from "@/components/Strike.vue"
+import SectionHeader from "@/components/SectionHeader.vue"
 import BaseCard from "../BaseCard.vue"
 import PortfolioItem from "./PortfolioItem.vue"
 

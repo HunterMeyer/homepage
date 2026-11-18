@@ -1,4 +1,6 @@
-@import "./poppins-font.css";
+@import "@fontsource-variable/orbitron";
+@import "@fontsource-variable/quicksand";
+@import "@fontsource/press-start-2p/latin-400.css";
 @import "./remixicon.css";
 
 @tailwind base;
@@ -9,6 +11,8 @@
   html {
     height: 100%;
     width: 100%;
+    color-scheme: dark;
+    background-color: theme("colors.arcade.900");
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -18,26 +22,140 @@
   }
 
   body {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     overscroll-behavior: none;
-    background-attachment: fixed;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-    background-color: rgb(27, 27, 27);
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-      linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0) 10%,
-        rgba(0, 0, 0, 0) 90%,
-        rgba(0, 0, 0, 0.6) 100%
-      ),
-      url("/images/background.webp");
+    /* No background here: it would paint over the z-index:-1 .arcade-backdrop */
+    @apply font-body text-arcade-200 antialiased;
+  }
+
+  ::selection {
+    background: rgb(255 43 214 / 0.45);
+    color: #fff;
   }
 
   a,
   button {
-    @apply focus:outline-none focus-visible:ring focus-visible:ring-yellow-500;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-neon-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-arcade-900;
+  }
+}
+
+@layer components {
+  /* Glassy dark panel with a thin neon edge */
+  .panel {
+    @apply rounded-2xl border border-neon-cyan/20 bg-gradient-to-b from-arcade-800/90 to-arcade-900/90 shadow-panel backdrop-blur-md;
+  }
+
+  /* Small outlined pill, used for tags and dates */
+  .chip {
+    @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-neon-cyan/30 bg-neon-cyan/5 px-2.5 py-0.5 text-xs font-semibold text-neon-cyan;
+  }
+
+  .chip-magenta {
+    @apply border-neon-magenta/40 bg-neon-magenta/10 text-neon-magenta;
+  }
+
+  .neon-text {
+    text-shadow:
+      0 0 8px rgb(34 229 255 / 0.45),
+      0 0 22px rgb(34 229 255 / 0.2);
+  }
+
+  .pixel-label {
+    @apply font-pixel text-[0.6rem] uppercase leading-none tracking-wider;
+  }
+
+  /* Round icon button with a soft gradient (social links) */
+  .icon-btn {
+    @apply flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.02] text-xl text-arcade-100 shadow-[inset_0_1px_0_rgb(255_255_255/0.08)] transition duration-200 hover:-translate-y-0.5 hover:border-neon-cyan/60 hover:text-neon-cyan hover:shadow-glow-sm;
+  }
+}
+
+/* Segmented "HP bar" fill for skill meters */
+.hp-bar {
+  background: linear-gradient(90deg, theme("colors.neon.cyan"), theme("colors.neon.violet") 60%, theme("colors.neon.magenta"));
+  box-shadow: 0 0 10px rgb(34 229 255 / 0.35);
+  mask-image: repeating-linear-gradient(90deg, #000 0 10px, transparent 10px 12px);
+}
+
+/* CRT scanlines over screenshots */
+.crt {
+  position: relative;
+}
+
+.crt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgb(0 0 0 / 0.18) 0 1px, transparent 1px 3px);
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+/* Backdrop: night-sky glows + a synthwave grid floor + faint CRT scanlines */
+.arcade-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(60rem 40rem at 10% -10%, rgb(34 229 255 / 0.12), transparent 60%),
+    radial-gradient(50rem 40rem at 110% 20%, rgb(139 92 246 / 0.14), transparent 60%),
+    radial-gradient(40rem 30rem at 50% 110%, rgb(255 43 214 / 0.14), transparent 70%),
+    theme("colors.arcade.900");
+}
+
+.arcade-backdrop::before {
+  /* Perspective grid "floor" */
+  content: "";
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  bottom: -10%;
+  height: 55%;
+  background-image:
+    linear-gradient(rgb(255 43 214 / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(34 229 255 / 0.35) 1px, transparent 1px);
+  background-size: 48px 48px;
+  transform: perspective(420px) rotateX(62deg);
+  transform-origin: bottom;
+  mask-image: linear-gradient(to top, black 15%, transparent 90%);
+  opacity: 0.7;
+}
+
+.arcade-backdrop::after {
+  /* Scanlines */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 0.025) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+@keyframes gridScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 48px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .arcade-backdrop::before {
+    animation: gridScroll 6s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scale-up,
+  .animate-blink {
+    animation: none !important;
   }
 }

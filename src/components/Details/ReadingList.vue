@@ -1,15 +1,17 @@
 <template>
-  <BaseCard class="flex flex-col gap-6 text-black dark:text-white">
-    <header class="flex flex-col gap-4">
-      <h2 class="text-3xl font-bold">Reading list</h2>
-      <Strike />
-    </header>
+  <BaseCard class="flex flex-col gap-6">
+    <SectionHeader
+      title="Reading list"
+      kicker="Lore collection"
+      :stage="4"
+    />
 
-    <section class="grid grid-cols-1 gap-8">
+    <section class="flex flex-col divide-y divide-white/5">
       <ReadingListItem
-        v-for="(item, index) in items"
-        :key="index"
+        v-for="item in items"
+        :key="item.title"
         :item="item"
+        class="py-5 first:pt-0 last:pb-0"
       />
     </section>
   </BaseCard>
@@ -17,8 +19,8 @@
 
 <script setup>
 import { readingListData } from "@/data/reading-list.js"
+import SectionHeader from "@/components/SectionHeader.vue"
 import BaseCard from "../BaseCard.vue"
-import Strike from "@/components/Strike.vue"
 import ReadingListItem from "./ReadingListItem.vue"
 
 const items = readingListData.filter((item) => item.visible)

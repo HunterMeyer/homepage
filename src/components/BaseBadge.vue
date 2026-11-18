@@ -1,16 +1,31 @@
 <template>
-  <div
-    class="rounded-lg bg-black px-3 py-1 text-center text-xs font-light text-white dark:bg-my-black-800/50"
-  >
-    {{ title }}
-  </div>
+  <span :class="['chip', variantClass]">
+    <slot>{{ title }}</slot>
+  </span>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from "vue"
+
+const props = defineProps({
   title: {
     type: String,
-    required: true,
+    default: "",
+  },
+  variant: {
+    type: String,
+    default: "cyan",
+    validator: (value) => ["cyan", "magenta", "gold", "muted"].includes(value),
   },
 })
+
+const variantClass = computed(
+  () =>
+    ({
+      cyan: "",
+      magenta: "chip-magenta",
+      gold: "border-neon-gold/40 bg-neon-gold/10 text-neon-gold",
+      muted: "border-white/10 bg-white/5 font-medium text-arcade-200",
+    })[props.variant],
+)
 </script>

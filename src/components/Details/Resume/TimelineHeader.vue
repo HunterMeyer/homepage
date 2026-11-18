@@ -1,11 +1,16 @@
 <template>
-  <header class="z-10 flex flex-row items-center gap-5 text-2xl">
+  <header class="flex flex-row items-center gap-4">
     <div
-      class="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-yellow-500 shadow-lg dark:bg-yellow-200/10 dark:text-yellow-500"
+      class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-neon-cyan/40 bg-neon-cyan/10 text-xl text-neon-cyan shadow-glow-sm"
     >
-      <i :class="iconName" />
+      <i
+        :class="iconName"
+        aria-hidden="true"
+      />
     </div>
-    <h3 class="font-bold">{{ title }}</h3>
+    <h3 class="font-display text-lg font-bold uppercase tracking-wider text-white">
+      {{ title }}
+    </h3>
   </header>
 </template>
 

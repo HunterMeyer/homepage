@@ -124,12 +124,84 @@ describe("useScrollSpy", () => {
     expect(window.location.hash).not.toBe("#about")
   })
 
+  it("stays paused through a long jump that outlasts the cap", () => {
+    let api
+    ;({ wrapper, api } = mountSpy())
+    api.select(items[2])
+
+    // Keep scrolling for 1.5s, passing through "resume" the whole time
+    for (let t = 0; t < 1500; t += 50) {
+      setScroll(1000 + t / 10)
+      vi.advanceTimersByTime(50)
+    }
+    expect(api.activeItemId.value).toBe("projects")
+  })
+
+  it("resumes as soon as the jump target arrives, with no timers involved", () => {
+    let api
+    ;({ wrapper, api } = mountSpy())
+    api.select(items[2])
+
+    setScroll(1500) // still on the way: paused
+    setScroll(2000) // projects top hits 0 (its scroll-margin in jsdom): arrived
+    setScroll(800) // the user scrolls back up right away
+    expect(api.activeItemId.value).toBe("resume")
+  })
+
+  it("resumes when the user grabs the scroll mid-jump", () => {
+    let api
+    ;({ wrapper, api } = mountSpy())
+    api.select(items[2])
+
+    setScroll(900)
+    window.dispatchEvent(new Event("wheel"))
+    expect(api.activeItemId.value).toBe("resume")
+  })
+
   it("resumes after the cap when the jump needs no scrolling", () => {
     let api
     ;({ wrapper, api } = mountSpy())
     api.select(items[1]) // resume isn't in view at scrollY 0
-    vi.advanceTimersByTime(1000)
+    vi.advanceTimersByTime(3000)
     expect(api.activeItemId.value).toBe("about")
+  })
+
+  it("goTo pushes one history entry and scrolls to the section", () => {
+    let api
+    ;({ wrapper, api } = mountSpy())
+    const before = window.history.length
+    api.goTo(items[2])
+    expect(api.activeItemId.value).toBe("projects")
+    expect(window.location.hash).toBe("#projects")
+    expect(window.history.length).toBe(before + 1)
+    expect(document.getElementById("projects").scrollIntoView).toHaveBeenCalledWith({
+      block: "start",
+    })
+  })
+
+  it("goTo retargets the scroll when called again mid-jump", () => {
+    let api
+    ;({ wrapper, api } = mountSpy())
+    api.goTo(items[2]) // heading down to projects...
+    setScroll(500) // ...still on the way
+    api.goTo(items[1]) // change of mind
+
+    expect(document.getElementById("resume").scrollIntoView).toHaveBeenCalled()
+    expect(api.activeItemId.value).toBe("resume")
+    expect(window.location.hash).toBe("#resume")
+
+    setScroll(1000) // resume reaches its resting spot: spy resumes on it
+    expect(api.activeItemId.value).toBe("resume")
+  })
+
+  it("goTo scrolls itself when the hash is already that section", () => {
+    window.history.replaceState(undefined, "", "/#resume")
+    let api
+    ;({ wrapper, api } = mountSpy())
+    const el = document.getElementById("resume")
+    el.scrollIntoView.mockClear()
+    api.goTo(items[1])
+    expect(el.scrollIntoView).toHaveBeenCalled()
   })
 
   it("follows hash changes from back/forward", () => {

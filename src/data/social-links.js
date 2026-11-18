@@ -9,9 +9,4 @@ export const socialLinksData = [
     url: "https://github.com/huntermeyer",
     iconName: "ri-github-fill",
   },
-  {
-    title: "Stack Overflow",
-    url: "https://stackoverflow.com/users/1953904/hunter",
-    iconName: "ri-stack-overflow-fill",
-  },
 ]

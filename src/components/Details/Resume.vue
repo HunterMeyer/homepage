@@ -1,20 +1,21 @@
 <template>
-  <BaseCard class="flex flex-col gap-6 text-black dark:text-white">
-    <header class="flex flex-col gap-4">
-      <h2 class="text-3xl font-bold">Resume</h2>
-      <Strike />
-    </header>
+  <BaseCard class="flex flex-col gap-8">
+    <SectionHeader
+      title="Resume"
+      kicker="Quest log"
+      :stage="2"
+    />
 
-    <section class="flex flex-col gap-4">
+    <div class="flex flex-col gap-10">
       <Experience />
       <Education />
       <Skills />
-    </section>
+    </div>
   </BaseCard>
 </template>
 
 <script setup>
 import { Education, Experience, Skills } from "./Resume/index.js"
-import Strike from "@/components/Strike.vue"
+import SectionHeader from "@/components/SectionHeader.vue"
 import BaseCard from "../BaseCard.vue"
 </script>

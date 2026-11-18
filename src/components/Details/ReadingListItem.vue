@@ -1,56 +1,67 @@
 <template>
-  <section class="animate-scale-up">
-    <div class="grid grid-cols-3 gap-6 rounded-2xl">
-      <a
-        v-bind="linkAttrs"
-        class="group col-span-1"
+  <article class="grid animate-scale-up grid-cols-[5.5rem_1fr] gap-4 md:grid-cols-[7.5rem_1fr] md:gap-6">
+    <a
+      v-bind="linkAttrs"
+      tabindex="-1"
+      aria-hidden="true"
+      class="group self-start"
+    >
+      <figure
+        class="crt aspect-[2/3] overflow-hidden rounded-lg border border-white/10 shadow-panel transition duration-200 group-hover:-translate-y-1 group-hover:border-neon-cyan/60 group-hover:shadow-glow"
       >
-        <figure
-          class="relative overflow-hidden rounded-2xl shadow-xl before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-transparent before:transition-all before:duration-200 before:ease-in-out before:content-[''] before:group-hover:bg-black/50"
+        <img
+          :src="item.imageUrl"
+          alt=""
+          class="h-full w-full object-cover object-top transition duration-300 group-hover:scale-105"
+          loading="lazy"
+        />
+      </figure>
+    </a>
+
+    <div class="flex min-w-0 flex-col gap-1.5">
+      <div
+        v-if="isReading"
+        class="mb-1"
+      >
+        <BaseBadge variant="magenta">
+          <span
+            class="h-1.5 w-1.5 animate-pulse rounded-full bg-neon-magenta"
+            aria-hidden="true"
+          ></span>
+          Now reading
+        </BaseBadge>
+      </div>
+      <h3 class="font-display text-base font-bold leading-snug text-white md:text-lg">
+        <a
+          v-bind="linkAttrs"
+          class="rounded transition hover:text-neon-cyan"
         >
-          <div
-            class="absolute left-1/2 top-1/2 z-10 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 scale-75 items-center justify-center rounded-2xl bg-white text-yellow-500 opacity-0 shadow-lg transition-all duration-200 ease-in-out group-hover:scale-100 group-hover:opacity-100 dark:bg-my-black-700/85"
-          >
-            <i class="ri-external-link-line text-xl" />
-          </div>
-          <img
-            :src="item.imageUrl"
-            :alt="item.title"
-            :style="{ 'object-position': 'center top' }"
-            class="h-full w-full object-cover transition-all duration-200 ease-in-out group-hover:scale-110"
-            loading="lazy"
-          />
-        </figure>
-      </a>
-      <header class="col-span-2">
-        <h3 class="text-lg font-medium hover:text-yellow-500">
-          <a v-bind="linkAttrs">
-            {{ item.title }}
-          </a>
-        </h3>
-        <p class="text-base font-light text-my-black-300 dark:text-gray-300">
-          {{ item.author }}
-        </p>
-        <p class="mt-2 text-xs text-my-black-300 md:text-base dark:text-gray-300">
-          {{ item.description }}
-        </p>
-        <div
-          v-if="hasGenres"
-          class="mt-2 flex flex-wrap gap-2 md:mt-4"
-        >
-          <BaseBadge
-            v-for="(genre, index) in item.genres"
-            :title="genre"
-            :key="index"
-          />
-        </div>
-      </header>
+          {{ item.title }}
+        </a>
+      </h3>
+      <p class="text-sm text-arcade-300">{{ item.author }}</p>
+      <p class="mt-1 text-sm leading-relaxed text-arcade-300 max-md:line-clamp-3 md:text-base">
+        {{ item.description }}
+      </p>
+      <div
+        v-if="hasGenres"
+        class="mt-2 flex flex-wrap gap-2"
+      >
+        <BaseBadge
+          v-for="genre in item.genres"
+          :key="genre"
+          :title="genre"
+          variant="muted"
+        />
+      </div>
     </div>
-  </section>
+  </article>
 </template>
 
 <script setup>
 import BaseBadge from "../BaseBadge.vue"
+import { readStatus } from "@/data/reading-list.js"
+
 const props = defineProps({
   item: {
     type: Object,
@@ -59,6 +70,7 @@ const props = defineProps({
 })
 
 const hasGenres = props.item.genres && props.item.genres.length > 0
+const isReading = props.item.readStatus === readStatus.READING
 const linkAttrs = {
   href: props.item.url,
   target: "_blank",

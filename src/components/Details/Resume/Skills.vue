@@ -5,7 +5,7 @@
       icon-name="ri-code-s-slash-line"
     />
 
-    <section class="flex flex-col gap-5 p-2">
+    <section class="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
       <SkillsItem
         v-for="(item, index) in items"
         :key="index"

@@ -2,10 +2,15 @@
   <a
     :href="link.url"
     :title="link.title"
+    :aria-label="link.title"
     target="_blank"
-    class="flex rounded-sm text-2xl leading-5 text-my-black-300 hover:text-black dark:text-white dark:hover:text-yellow-500"
+    rel="noopener"
+    class="icon-btn"
   >
-    <i :class="link.iconName" />
+    <i
+      :class="link.iconName"
+      aria-hidden="true"
+    />
   </a>
 </template>
 

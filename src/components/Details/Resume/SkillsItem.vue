@@ -1,28 +1,33 @@
 <template>
   <section class="flex flex-col gap-2">
-    <header class="flex flex-row items-baseline gap-1.5">
-      <h4 class="text-base font-medium">{{ title }}</h4>
+    <header class="flex flex-row items-baseline justify-between gap-3">
+      <h4 class="font-semibold text-white">{{ title }}</h4>
       <data
         :value="level"
-        class="text-base font-light text-my-black-300 dark:text-gray-300"
+        class="pixel-label shrink-0 text-neon-gold"
       >
-        {{ levelPercent }}
+        {{ level }}/100
       </data>
     </header>
 
-    <section>
-      <div class="h-2 w-full rounded-md bg-gray-100 shadow-inner dark:bg-my-black-800/50">
-        <div
-          class="h-full rounded-md bg-gradient-to-r from-amber-300 to-amber-400"
-          :style="{ width: levelPercent }"
-        ></div>
-      </div>
-    </section>
+    <div
+      class="h-3.5 w-full rounded border border-white/10 bg-arcade-950/70 p-[2px]"
+      role="meter"
+      :aria-label="title"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      :aria-valuenow="level"
+    >
+      <div
+        class="hp-bar h-full rounded-sm"
+        :style="{ width: `${level}%` }"
+      ></div>
+    </div>
   </section>
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     required: true,
@@ -32,6 +37,4 @@ const props = defineProps({
     required: true,
   },
 })
-
-const levelPercent = `${props.level}%`
 </script>
